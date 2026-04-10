@@ -4,7 +4,7 @@
 
 ## Tabla de prioridad
 
-| ID | Caso de Uso | Actor(es) | Prioridad |q
+| ID | Caso de Uso | Actor(es) | Prioridad |
 |---|---|---|---|
 | CU03 | Introducir documentacion funcional | Ingeniero de QA | Alta |
 | CU06 | Extraer casos de uso | Ingeniero de QA | Alta |
