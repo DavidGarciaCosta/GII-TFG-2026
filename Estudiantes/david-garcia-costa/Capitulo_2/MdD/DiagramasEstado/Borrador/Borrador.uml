@@ -10,8 +10,7 @@ EnRevision --> ConFeedback : anadirFeedback()
 ConFeedback --> Regenerado : regenerarVersion()
 Regenerado --> PendienteRevision : nuevaVersionDisponible()
 EnRevision --> Aprobado : aceptarBorrador()
-EnRevision --> Rechazado : rechazarBorrador()
-Rechazado --> Eliminado : eliminarBorrador()
+EnRevision --> Eliminado : rechazarBorrador()
 Aprobado --> [*]
 Eliminado --> [*]
 }

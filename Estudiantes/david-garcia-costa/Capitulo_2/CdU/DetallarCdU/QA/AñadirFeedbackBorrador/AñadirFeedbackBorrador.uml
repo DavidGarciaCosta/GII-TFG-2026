@@ -7,28 +7,35 @@ state anadirFeedbackBorrador as "anadirFeedbackBorrador()" {
     state " " as SeleccionandoBorrador
     state " " as IntroduciendoFeedback
     state " " as RegistrandoFeedback
+    state " " as GenerandoNuevaVersion
 
     [*] -[#green]-> SeleccionandoBorrador
     note on link
-    Se solicita anadir feedback a un borrador
+    Se selecciona el borrador a revisar
     end note
 
     SeleccionandoBorrador -[#green]-> IntroduciendoFeedback
     note on link
-    <b>Sistema</b> muestra el borrador
-    y habilita la entrada de feedback
+    <b>Sistema</b> muestra el contenido actual
+    del borrador y habilita la revision
     end note
 
     IntroduciendoFeedback -[#green]-> RegistrandoFeedback
     note on link
-    <b>Sistema</b> recibe el feedback
-    y valida su contenido
+    <b>Sistema</b> recibe y valida el feedback
+    introducido por el actor
     end note
 
-    RegistrandoFeedback -[#green]-> [*]
+    RegistrandoFeedback -[#green]-> GenerandoNuevaVersion
     note on link
-    <b>Sistema</b> registra el feedback
-    sobre el borrador
+    <b>Sistema</b> registra el feedback asociado
+    al borrador seleccionado
+    end note
+
+    GenerandoNuevaVersion -[#green]-> [*]
+    note on link
+    <b>Sistema</b> genera y registra una nueva version
+    del borrador enriquecida con el feedback
     end note
 }
 

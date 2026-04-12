@@ -5,34 +5,34 @@ skinparam linetype polyline
 state rechazarBorrador as "rechazarBorrador()" {
 
     state " " as SeleccionandoBorrador
-    state " " as ConfirmandoRechazo
-    state " " as EliminandoBorrador
+    state " " as SolicitandoRechazo
+    state " " as ActualizandoEstado
 
     [*] -[#green]-> SeleccionandoBorrador
     note on link
-    Se solicita rechazar un borrador
+    Se selecciona el borrador a rechazar
     end note
 
-    SeleccionandoBorrador -[#green]-> ConfirmandoRechazo
+    SeleccionandoBorrador -[#green]-> SolicitandoRechazo
     note on link
-    <b>Sistema</b> solicita confirmacion
-    del rechazo
+    El actor solicita el rechazo
+    del borrador seleccionado
     end note
 
-    ConfirmandoRechazo -[#green]-> EliminandoBorrador
+    SolicitandoRechazo -[#green]-> ActualizandoEstado
     note on link
-    <b>Sistema</b> actualiza el estado
-    del borrador
+    <b>Sistema</b> valida el estado actual
+    y procesa el rechazo
     end note
 
-    EliminandoBorrador -[#green]-> [*]
+    ActualizandoEstado -[#green]-> [*]
     note on link
-    <b>Sistema</b> elimina el borrador
-    del flujo si corresponde
+    <b>Sistema</b> marca el borrador
+    como rechazado
     end note
 }
 
-rechazarBorrador -[#green]-> BORRADORES_ABIERTO
+rechazarBorrador -[#green]-> BORRADOR_RECHAZADO
 note on link
 completarRechazo()
 end note

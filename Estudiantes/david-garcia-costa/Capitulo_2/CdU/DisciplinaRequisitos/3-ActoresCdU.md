@@ -1,27 +1,21 @@
-﻿|[ ← Matriz](./Matriz.md) | [ → PriorizarCdU](./PriorizarCdU.md) |
+| [<- Matriz](./2-Matriz.md) | [-> PriorizarCdU](./4-PriorizarCdU.md) |
 
-# Actores del Sistema y Casos de Uso
+# Actores del sistema y casos de uso
 
-## 1. Identificación de Actores
+## 1. Identificacion de actores
 
 En el sistema se identifican dos actores principales:
 
-
 ![Actores](/Estudiantes/david-garcia-costa/Capitulo_2/CdU/ActoresIndividuales/Actores.svg)
 
-
-- **Ingeniero de QA (Quality Assurance)**: actor principal del sistema, responsable de iniciar y controlar el flujo de trabajo. A partir de la documentación del proyecto, utiliza el sistema para seleccionar o crear nuevas sesiones de trabajo, extraer casos de uso y requisitos funcionales, generar escenarios de prueba, refinarlos mediante iteraciones y feedback, guardar los resultados obtenidos y finalmente publicar los casos de prueba. Actúa como supervisor del proceso, validando los artefactos generados antes de su integración en herramientas externas.
-
-- **Kiwi TCMS**: sistema externo con el que se integra la solución, encargado de registrar los casos de prueba generados. Proporciona funcionalidades de persistencia, consulta y administración de los casos de prueba, permitiendo su reutilización y seguimiento dentro del proceso de testing.
-
-
+- **Ingeniero de QA (Quality Assurance)**: actor principal del sistema, responsable de iniciar y controlar el flujo de trabajo. A partir de la documentacion del proyecto, utiliza el sistema para seleccionar o crear sesiones de trabajo, extraer casos de uso y requisitos funcionales, generar escenarios Gherkin, crear y revisar borradores, aceptar y publicar casos de prueba en Kiwi TCMS, y guardar los resultados obtenidos.
+- **Kiwi TCMS**: sistema externo con el que se integra la solucion, encargado de recibir y registrar los casos de prueba publicados. Tambien proporciona funcionalidades de consulta para buscar y visualizar casos de prueba existentes.
 
 ---
 
-## 2. Actor y Casos de Uso
+## 2. Actor y casos de uso
 
-### 2.1 Ingeniero de QA (Quality Assurance)
-
+### 2.1 Ingeniero de QA
 
 #### Casos de uso del actor Ingeniero de QA
 
@@ -37,18 +31,13 @@ En el sistema se identifican dos actores principales:
 
 ---
 
-## 4. Relación entre Actores y Sistema
+## 3. Relacion entre actores y sistema
 
-El flujo principal del sistema se articula a través del actor Ingeniero de QA, que interactúa con el sistema para gestionar sesiones de trabajo y transformar documentación en casos de prueba.
+El flujo principal del sistema se articula a traves del actor Ingeniero de QA, que interactua con la solucion para gestionar sesiones de trabajo y transformar documentacion funcional en artefactos de prueba.
 
-El sistema, a su vez, se integra con **Kiwi TCMS** para almacenar y gestionar los resultados finales.
+El sistema, a su vez, se integra con **Kiwi TCMS** para publicar, registrar y consultar los casos de prueba finales.
 
 De esta forma:
 
-- **QA** actúa como actor primario (iniciador del flujo)
-- **Kiwi TCMS** actúa como sistema externo (soporte de persistencia y consulta)
-
----
-
-## 5. Diagrama Contexto
-![Diagrama de Contexto](/Estudiantes/david-garcia-costa/Capitulo_2/CdU/DiagramaContexto/DiagramaContexto.svg)
+- **Ingeniero de QA** actua como actor primario e iniciador del flujo.
+- **Kiwi TCMS** actua como sistema externo de integracion, persistencia y consulta.

@@ -4,29 +4,31 @@ skinparam linetype polyline
 
 state registrarCasoPrueba as "registrarCasoPrueba()" {
 
-    state " " as RecibiendoCaso
-    state " " as ValidandoCaso
-    state " " as RegistrandoCaso
+    state " " as RecibiendoSolicitud
+    state " " as ValidandoInformacion
+    state " " as AlmacenandoCaso
 
-    [*] -[#green]-> RecibiendoCaso
+    [*] -[#green]-> RecibiendoSolicitud
     note on link
-    Kiwi TCMS recibe el caso de prueba
+    Kiwi TCMS recibe la solicitud de registro
+    del caso de prueba
     end note
 
-    RecibiendoCaso -[#green]-> ValidandoCaso
+    RecibiendoSolicitud -[#green]-> ValidandoInformacion
     note on link
     <b>Kiwi TCMS</b> valida la informacion recibida
     end note
 
-    ValidandoCaso -[#green]-> RegistrandoCaso
+    ValidandoInformacion -[#green]-> AlmacenandoCaso
     note on link
-    <b>Kiwi TCMS</b> prepara el registro
-    del caso de prueba
+    <b>Kiwi TCMS</b> almacena el caso de prueba
+    si la validacion es correcta
     end note
 
-    RegistrandoCaso -[#green]-> [*]
+    AlmacenandoCaso -[#green]-> [*]
     note on link
-    <b>Kiwi TCMS</b> registra el caso de prueba
+    <b>Kiwi TCMS</b> devuelve la confirmacion
+    del registro realizado
     end note
 }
 

@@ -46,7 +46,7 @@ SISTEMA -> SISTEMA : Guardar casos de uso
 SISTEMA -> SISTEMA : Guardar requisitos funcionales
 SISTEMA -> SISTEMA : Guardar borrador
 note right of SISTEMA
-CU33 - Guardar resultados
+CU30 - Guardar resultados
 (casos de uso, requisitos funcionales,
 y borradores)
 end note
@@ -78,7 +78,7 @@ SISTEMA -> SISTEMA : Guardar caso de uso
 SISTEMA --> QA : Caso de uso creado
 note right of SISTEMA
 CU09 - Crear caso de uso
-CU33 - Guardar resultados
+CU30 - Guardar resultados
 end note
 
 QA -> SISTEMA : Actualizar caso de uso
@@ -86,7 +86,7 @@ SISTEMA -> SISTEMA : Guardar cambios
 SISTEMA --> QA : Caso de uso actualizado
 note right of SISTEMA
 CU10 - Actualizar caso de uso
-CU33 - Guardar resultados
+CU30 - Guardar resultados
 end note
 
 QA -> SISTEMA : Eliminar caso de uso
@@ -114,7 +114,7 @@ SISTEMA -> SISTEMA : Guardar requisito funcional
 SISTEMA --> QA : Requisito funcional creado
 note right of SISTEMA
 CU15 - Crear requisito funcional
-CU33 - Guardar resultados
+CU30 - Guardar resultados
 end note
 
 QA -> SISTEMA : Actualizar requisito funcional
@@ -122,7 +122,7 @@ SISTEMA -> SISTEMA : Guardar cambios
 SISTEMA --> QA : Requisito funcional actualizado
 note right of SISTEMA
 CU16 - Actualizar requisito funcional
-CU33 - Guardar resultados
+CU30 - Guardar resultados
 end note
 
 QA -> SISTEMA : Eliminar requisito funcional
@@ -159,41 +159,30 @@ alt Anadir feedback
   CU23 - Anadir feedback a borrador
   end note
 
-  SISTEMA -> SISTEMA : Regenerar borrador
-  SISTEMA -> SISTEMA : Guardar nueva version
+  SISTEMA -> SISTEMA : Registrar feedback
+  SISTEMA -> SISTEMA : Generar nueva version del borrador
   SISTEMA --> QA : Mostrar borrador actualizado
   note right of SISTEMA
-  CU24 - Regenerar borrador
-  CU33 - Guardar resultados
-  end note
-end
-
-alt Borrador aceptado
-  QA -> SISTEMA : Aceptar borrador
-  note right of SISTEMA
-  CU25 - Aceptar borrador
-  end note
-
-  SISTEMA -> SISTEMA : Generar caso de prueba derivado de borrador
-  SISTEMA --> QA : Caso de prueba generado
-  note right of SISTEMA
-  CU27 - Generar caso de prueba derivado de borrador
-  end note
-
-  QA -> SISTEMA : Publicar caso de prueba en Kiwi TCMS
-  SISTEMA -> KIWI : Registrar caso de prueba en Kiwi TCMS
-  KIWI --> SISTEMA : Resultado publicacion
-  SISTEMA --> QA : Caso de prueba publicado
-  note right of SISTEMA
-  CU28 - Publicar caso de prueba en Kiwi TCMS
-  CU34 - Registrar caso de prueba en Kiwi TCMS
+  CU23 - Anadir feedback a borrador
+  CU30 - Guardar resultados
   end note
 
 else Borrador rechazado
   QA -> SISTEMA : Rechazar borrador
-  SISTEMA --> QA : Borrador eliminado
+  SISTEMA --> QA : Borrador rechazado
   note right of SISTEMA
-  CU26 - Rechazar borrador
+  CU24 - Rechazar borrador
+  end note
+
+else Borrador aceptado y publicado
+  QA -> SISTEMA : Aceptar y publicar caso de prueba a partir de borrador
+  SISTEMA -> SISTEMA : Generar caso de prueba final
+  SISTEMA -> KIWI : Registrar caso de prueba en Kiwi TCMS
+  KIWI --> SISTEMA : Resultado publicacion
+  SISTEMA --> QA : Caso de prueba publicado
+  note right of SISTEMA
+  CU25 - Aceptar y publicar caso de prueba a partir de borrador
+  CU31 - Registrar caso de prueba en Kiwi TCMS
   end note
 end
 
@@ -202,14 +191,14 @@ end
 QA -> KIWI : Buscar casos de prueba en Kiwi TCMS
 KIWI --> QA : Lista de resultados
 note right of KIWI
-CU29 - Buscar casos de prueba en Kiwi TCMS
+CU26 - Buscar casos de prueba en Kiwi TCMS
 end note
 
 QA -> KIWI : Ver caso de prueba en Kiwi TCMS
 KIWI --> QA : Detalle de caso
 KIWI --> QA : Resultado final / estado
 note right of KIWI
-CU30 - Ver caso de prueba en Kiwi TCMS
+CU27 - Ver caso de prueba en Kiwi TCMS
 end note
 
 @enduml

@@ -33,17 +33,14 @@ rectangle "Sistema" {
   usecase "Listar\nborradores" as CU21
   usecase "Consultar\nborrador" as CU22
   usecase "Anadir feedback\na borrador" as CU23
-  usecase "Regenerar\nborrador" as CU24
-  usecase "Aceptar\nborrador" as CU25
-  usecase "Rechazar\nborrador" as CU26
+  usecase "Rechazar\nborrador" as CU24
+  usecase "Aceptar y publicar caso de prueba\na partir de borrador" as CU25
 
-  usecase "Generar caso de prueba\nderivado de borrador" as CU27
-  usecase "Publicar caso de prueba\nen Kiwi TCMS" as CU28
-  usecase "Buscar casos de prueba\nen Kiwi TCMS" as CU29
-  usecase "Ver caso de prueba\nen Kiwi TCMS" as CU30
-  usecase "Seleccionar\nsesiones" as CU31
-  usecase "Crear nueva\nsesion" as CU32
-  usecase "Guardar\nresultados" as CU33
+  usecase "Buscar casos de prueba\nen Kiwi TCMS" as CU26
+  usecase "Ver caso de prueba\nen Kiwi TCMS" as CU27
+  usecase "Seleccionar\nsesiones" as CU28
+  usecase "Crear nueva\nsesion" as CU29
+  usecase "Guardar\nresultados" as CU30
 }
 
 QA --> CU01
@@ -76,8 +73,5 @@ QA --> CU27
 QA --> CU28
 QA --> CU29
 QA --> CU30
-QA --> CU31
-QA --> CU32
-QA --> CU33
 
 @enduml

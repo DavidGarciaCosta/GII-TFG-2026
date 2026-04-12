@@ -1,4 +1,4 @@
-@startuml
+﻿@startuml
 left to right direction
 
 [*] --> SISTEMA_CERRADO
@@ -47,23 +47,15 @@ BORRADORES_ABIERTO --> BORRADORES_ABIERTO : guardarResultados()
 
 BORRADORES_ABIERTO --> BORRADOR_ABIERTO : consultarBorrador()
 BORRADORES_ABIERTO --> BORRADOR_ABIERTO : anadirFeedbackBorrador()
-BORRADORES_ABIERTO --> BORRADOR_ABIERTO : regenerarBorrador()
-BORRADORES_ABIERTO --> BORRADOR_ABIERTO : aceptarBorrador()
 BORRADORES_ABIERTO --> BORRADOR_ABIERTO : rechazarBorrador()
 BORRADOR_ABIERTO --> BORRADOR_ABIERTO : guardarResultados()
 BORRADOR_ABIERTO --> BORRADORES_ABIERTO : completarGestion()
 
-BORRADOR_ABIERTO --> CASO_PRUEBA_PREPARADO : generarCasoPruebaDerivadoDeBorrador()
-CASO_PRUEBA_PREPARADO --> BORRADOR_ABIERTO : completarGeneracion()
-
-CASO_PRUEBA_PREPARADO --> KIWI_TCMS_ABIERTO : publicarCasoPruebaEnKiwiTCMS()
+BORRADOR_ABIERTO --> KIWI_TCMS_ABIERTO : aceptarYPublicarCasoPruebaDesdeBorrador()
 KIWI_TCMS_ABIERTO --> KIWI_TCMS_ABIERTO : registrarCasoPrueba()
-KIWI_TCMS_ABIERTO --> CASO_PRUEBA_PREPARADO : completarPublicacion()
+KIWI_TCMS_ABIERTO --> BORRADOR_ABIERTO : completarPublicacion()
 
-CASO_PRUEBA_PREPARADO --> KIWI_TCMS_ABIERTO : buscarCasosPruebaEnKiwiTCMS()
-KIWI_TCMS_ABIERTO --> CASO_PRUEBA_PREPARADO : completarConsulta()
-
-CASO_PRUEBA_PREPARADO --> KIWI_TCMS_ABIERTO : verCasoPruebaEnKiwiTCMS()
-KIWI_TCMS_ABIERTO --> CASO_PRUEBA_PREPARADO : completarConsulta()
+KIWI_TCMS_ABIERTO --> KIWI_TCMS_ABIERTO : buscarCasosPruebaEnKiwiTCMS()
+KIWI_TCMS_ABIERTO --> KIWI_TCMS_ABIERTO : verCasoPruebaEnKiwiTCMS()
 
 @enduml
