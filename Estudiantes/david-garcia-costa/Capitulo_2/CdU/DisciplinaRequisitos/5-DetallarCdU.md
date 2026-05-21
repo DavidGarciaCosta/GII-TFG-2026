@@ -329,7 +329,7 @@ En esta seccion se detallan los casos de uso del sistema desde el punto de vista
 - **Actor:** Ingeniero de QA
 - **Descripcion:** Permite aceptar un borrador y publicarlo como caso de prueba en Kiwi TCMS.
 - **Precondiciones:** Existe un borrador con contenido y la integracion con Kiwi TCMS esta disponible.
-- **Flujo principal:** 1. El actor revisa el borrador. 2. El actor confirma la publicacion. 3. El sistema envia el contenido del borrador a Kiwi TCMS. 4. Kiwi TCMS registra el caso. 5. El sistema guarda el identificador devuelto y marca el borrador como publicado.
+- **Flujo principal:** 1. El actor revisa el borrador. 2. El sistema confirma la publicacion. 3. El sistema envia el contenido del borrador a Kiwi TCMS. 4. Kiwi TCMS registra el caso. 5. El sistema guarda el identificador devuelto y marca el borrador como publicado.
 - **Casos de Error:** Borrador no encontrado, borrador sin contenido, fallo de integracion o error de publicacion.
 - **Postcondiciones:** El caso de prueba queda publicado y el borrador queda marcado como publicado.
 - **Diagrama:** ![Aceptar y publicar caso de prueba a partir de borrador](/Estudiantes/david-garcia-costa/Capitulo_2/CdU/DetallarCdU/QA/AceptarYPublicarCasoPruebaBorrador/AceptarYPublicarCasoPruebaBorrador.svg)
