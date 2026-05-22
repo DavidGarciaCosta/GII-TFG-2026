@@ -167,9 +167,8 @@ CrewAI se centra en la orquestación de agentes colaborativos y flujos complejos
 | Encaje directo con este TFG | SI | SI | NO | SI |
 
 ## Justificación
-En primer lugar, se puede decir que las soluciones tradicionales de automatización de testing no resuelven de forma completa el problema planteado.
 
-El problema de este TFG está orientado al hecho de como construir las pruebas. El análisis de la documentación que te dan los Project Managers, la extracción de requisitos y casos de uso relevantes y su transformación a otro lenguaje son tareas con una elevada carga. 
+El problema de este TFG está orientado al hecho de como construir las pruebas. El análisis de la documentación, la extracción de requisitos y casos de uso relevantes y su transformación a otro lenguaje son tareas con una elevada carga. 
 
 Por eso el enfoque se centra en asistir en la comprensión, estructuración y preparación de la información necesaria para el testing. 
 

@@ -3,7 +3,6 @@
 ### Proyecto
 
 Entidad que representa un contexto organizativo o funcional al que pertenece una documentacion.
-Permite agrupar documentacion, casos de uso, requisitos funcionales y escenarios de prueba.
 
 ### Sesion
 
@@ -47,7 +46,7 @@ Se deriva de uno o varios casos de uso y requisitos funcionales.
 
 Especificacion detallada que define como verificar una funcionalidad concreta del sistema.
 Describe las condiciones iniciales, los pasos a ejecutar, los datos de entrada y el resultado esperado.
-Se construye a partir de uno o varios escenarios de prueba, casos de uso y requisitos funcionales, y se deriva de borrador.
+Se construye a partir de uno o varios escenarios Gherkin, casos de uso y requisitos funcionales, y se deriva de borrador.
 
 ### Agente de IA
 
@@ -79,12 +78,12 @@ En el capitulo 2 se utiliza especialmente para los escenarios Gherkin pendientes
 ### Feedback
 
 Observacion, correccion o comentario incorporado durante la revision de un artefacto.
-Se utiliza para refinar escenarios de prueba antes de su aprobacion o publicacion.
+Se utiliza para refinar bprradores antes de su aprobacion o publicacion.
 
 ### Artefacto
 
 Elemento de informacion gestionado por el sistema dentro del flujo de analisis, generacion y publicacion.
-Incluye documentos de entrada, resultados de extraccion, escenarios borrador y casos publicados.
+Incluye documentos de entrada, resultados de extraccion, escenarios, borrador y casos publicados.
 
 ### Trazabilidad
 

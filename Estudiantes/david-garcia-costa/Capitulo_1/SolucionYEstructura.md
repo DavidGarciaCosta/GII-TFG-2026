@@ -26,7 +26,7 @@ La propuesta se plantea como un flujo dividido en varias responsabilidades. Un a
 
 La idea central es dividir el proceso en tareas especializadas y mantener la trazabilidad entre la documentación original, los requisitos detectados, los casos de uso y los escenarios de prueba propuestos. Esta división permitiría reducir la carga manual sin perder el control sobre las decisiones importantes del proceso.
 
-La propuesta se plantea como un prototipo controlado, de manera que sea posible comprobar su viabilidad técnica y valorar su utilidad dentro de un contexto real. El objetivo no es eliminar la revisión del equipo de QA, sino reducir el trabajo repetitivo, acelerar la fase preparatoria y ofrecer una base más estructurada sobre la que el usuario pueda validar y corregir casos de prueba.
+La propuesta se plantea como un prototipo controlado, de manera que sea posible comprobar su viabilidad técnica y valorar su utilidad dentro de un contexto real. El objetivo no es eliminar la revisión del equipo de QA, sino reducir el trabajo repetitivo, acelerar la fase preparatoria y ofrecer una base más estructurada sobre la que el usuario pueda validar y corregir borradores para casos de prueba.
 
 ---
 
