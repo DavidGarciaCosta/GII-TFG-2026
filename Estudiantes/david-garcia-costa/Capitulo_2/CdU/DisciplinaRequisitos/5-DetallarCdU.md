@@ -68,7 +68,7 @@ En esta seccion se detallan los casos de uso del sistema desde el punto de vista
 - **Flujo principal:** 1. El actor solicita el listado. 2. El sistema recupera los documentos disponibles para el usuario. 3. El sistema muestra proyecto, tipo, etiqueta, titulo, sesion y fecha.
 - **Casos de Error:** No existe documentacion registrada o falla la consulta.
 - **Postcondiciones:** El actor dispone de una vista general de la documentacion.
-- **Diagrama:** ![Listar documentacion](/Estudiantes/david-garcia-costa/Capitulo_2/CdU/DetallarCdU/QA/ListarDocumentacion/ListarDocumentacion.svg)
+- **Diagrama:** ![Listar documentacion](/Estudiantes/david-garcia-costa/Capitulo_2/CdU/DetallarCdU/QA/ListarDocumentacion/listarDocumentacion.svg)
 
 ---
 
@@ -79,7 +79,7 @@ En esta seccion se detallan los casos de uso del sistema desde el punto de vista
 - **Flujo principal:** 1. El actor selecciona un documento. 2. El sistema recupera sus metadatos y contenido. 3. El sistema muestra la informacion detallada.
 - **Casos de Error:** Documento no encontrado o fallo de recuperacion.
 - **Postcondiciones:** El actor visualiza el documento seleccionado.
-- **Diagrama:** ![Consultar documentacion](/Estudiantes/david-garcia-costa/Capitulo_2/CdU/DetallarCdU/QA/ConsultarDocumentacion/ConsultarDocumentacion.svg)
+- **Diagrama:** ![Consultar documentacion](/Estudiantes/david-garcia-costa/Capitulo_2/CdU/DetallarCdU/QA/ConsultarDocumentacion/consultarDocumentacion.svg)
 
 ---
 
@@ -101,7 +101,7 @@ En esta seccion se detallan los casos de uso del sistema desde el punto de vista
 - **Flujo principal:** 1. El actor solicita eliminar un documento. 2. El sistema solicita confirmacion. 3. El actor confirma. 4. El sistema elimina la documentacion.
 - **Casos de Error:** Documento inexistente o fallo de eliminacion.
 - **Postcondiciones:** La documentacion deja de estar disponible.
-- **Diagrama:** ![Eliminar documentacion](/Estudiantes/david-garcia-costa/Capitulo_2/CdU/DetallarCdU/QA/EliminarDocumentacion/EliminarDocumentacion.svg)
+- **Diagrama:** ![Eliminar documentacion](/Estudiantes/david-garcia-costa/Capitulo_2/CdU/DetallarCdU/QA/EliminarDocumentacion/eliminarDocumentacion.svg)
 
 ---
 
@@ -233,7 +233,7 @@ En esta seccion se detallan los casos de uso del sistema desde el punto de vista
 - **Flujo principal:** 1. El actor abre el formulario de escenario. 2. Introduce titulo, feature, etiquetas, caso de uso, requisitos asociados, background, pasos y ejemplos. 3. El sistema valida datos y trazabilidad. 4. El sistema registra el escenario.
 - **Casos de Error:** Titulo vacio, pasos vacios, referencias inexistentes o sesion en modo automatico.
 - **Postcondiciones:** Se crea un nuevo escenario Gherkin.
-- **Diagrama:** ![Crear escenario Gherkin](/Estudiantes/david-garcia-costa/Capitulo_2/CdU/DetallarCdU/QA/CrearEscenarioGherkin/CrearEscenarioGherkin.svg)
+- **Diagrama:** ![Crear escenario Gherkin](/Estudiantes/david-garcia-costa/Capitulo_2/CdU/DetallarCdU/QA/CrearEscenarioGherkin/crearEscenarioGherkin.svg)
 
 ---
 
@@ -244,7 +244,7 @@ En esta seccion se detallan los casos de uso del sistema desde el punto de vista
 - **Flujo principal:** 1. El actor selecciona un escenario. 2. El sistema recupera su detalle. 3. El sistema muestra la informacion estructurada y el texto Gherkin.
 - **Casos de Error:** Escenario no encontrado o error de acceso.
 - **Postcondiciones:** El actor visualiza el escenario seleccionado.
-- **Diagrama:** ![Consultar escenario Gherkin](/Estudiantes/david-garcia-costa/Capitulo_2/CdU/DetallarCdU/QA/ConsultarEscenarioGherkin/ConsultarEscenarioGherkin.svg)
+- **Diagrama:** ![Consultar escenario Gherkin](/Estudiantes/david-garcia-costa/Capitulo_2/CdU/DetallarCdU/QA/ConsultarEscenarioGherkin/consultarEscenarioGherkin.svg)
 
 ---
 
@@ -255,7 +255,7 @@ En esta seccion se detallan los casos de uso del sistema desde el punto de vista
 - **Flujo principal:** 1. El actor selecciona el escenario. 2. El sistema muestra su informacion actual. 3. El actor modifica datos y pasos. 4. El sistema valida y guarda los cambios.
 - **Casos de Error:** Escenario no encontrado, pasos invalidos o referencias inexistentes.
 - **Postcondiciones:** El escenario queda actualizado.
-- **Diagrama:** ![Actualizar escenario Gherkin](/Estudiantes/david-garcia-costa/Capitulo_2/CdU/DetallarCdU/QA/ActualizarEscenarioGherkin/ActualizarEscenarioGherkin.svg)
+- **Diagrama:** ![Actualizar escenario Gherkin](/Estudiantes/david-garcia-costa/Capitulo_2/CdU/DetallarCdU/QA/ActualizarEscenarioGherkin/actualizarEscenarioGherkin.svg)
 
 ---
 
@@ -266,7 +266,7 @@ En esta seccion se detallan los casos de uso del sistema desde el punto de vista
 - **Flujo principal:** 1. El actor solicita eliminar el escenario. 2. El sistema solicita confirmacion. 3. El actor confirma. 4. El sistema elimina el escenario.
 - **Casos de Error:** Escenario inexistente o fallo de eliminacion.
 - **Postcondiciones:** El escenario deja de estar disponible.
-- **Diagrama:** ![Eliminar escenario Gherkin](/Estudiantes/david-garcia-costa/Capitulo_2/CdU/DetallarCdU/QA/EliminarEscenarioGherkin/EliminarEscenarioGherkin.svg)
+- **Diagrama:** ![Eliminar escenario Gherkin](/Estudiantes/david-garcia-costa/Capitulo_2/CdU/DetallarCdU/QA/EliminarEscenarioGherkin/eliminarEscenarioGherkin.svg)
 
 ---
 
@@ -387,7 +387,7 @@ En esta seccion se detallan los casos de uso del sistema desde el punto de vista
 - **Flujo principal:** 1. El actor solicita eliminar la sesion. 2. El sistema solicita confirmacion. 3. El actor confirma. 4. El sistema elimina la sesion y los artefactos asociados.
 - **Casos de Error:** Sesion no encontrada o eliminacion no permitida.
 - **Postcondiciones:** La sesion deja de estar disponible.
-- **Diagrama:** ![Eliminar sesion](/Estudiantes/david-garcia-costa/Capitulo_2/CdU/DetallarCdU/QA/EliminarSesion/EliminarSesion.svg)
+- **Diagrama:** ![Eliminar sesion](/Estudiantes/david-garcia-costa/Capitulo_2/CdU/DetallarCdU/QA/EliminarSesion/eliminarSesion.svg)
 
 ---
 
