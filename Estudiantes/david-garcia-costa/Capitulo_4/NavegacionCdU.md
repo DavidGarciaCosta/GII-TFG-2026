@@ -161,7 +161,7 @@ Su finalidad es cambiar la sesion desde la aplicacion manual hacia el entorno de
 - **Flujo principal:** 1. El actor abre el formulario de escenario. 2. Introduce titulo, feature, etiquetas, caso de uso, requisitos asociados, background, pasos y ejemplos. 3. El sistema valida datos y trazabilidad. 4. El sistema registra el escenario.
 - **Casos de Error:** Titulo vacio, pasos vacios, referencias inexistentes o sesion en modo automatico.
 - **Postcondiciones:** Se crea un nuevo escenario Gherkin.
-- **Diagrama de detalle:** ![Crear escenario Gherkin](../Capitulo_2/CdU/DetallarCdU/QA/CrearEscenarioGherkin/CrearEscenarioGherkin.svg)
+- **Diagrama de detalle:** ![Crear escenario Gherkin](../Capitulo_2/CdU/DetallarCdU/QA/CrearEscenarioGherkin/crearEscenarioGherkin.svg)
 
 ### MVC UC-21
 
