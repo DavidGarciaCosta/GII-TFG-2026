@@ -40,14 +40,8 @@ Este proyecto desarrolla un prototipo de apoyo al proceso de QA que permite gene
 
 - [Capítulo 4 completo](Capitulo_4/Capitulo_4.md)
 - [Navegación por casos de uso](Capitulo_4/NavegacionCdU.md)
-- [Mapa de navegación](Capitulo_4/Imagenes_MapaNavegacion/PrimeraPantalla.png)
-- [Flujo manual](Capitulo_4/Imagenes_MapaNavegacion/RFyCU.png)
-- [Flujo automático con agentes](Capitulo_4/Imagenes_MapaNavegacion/FlujoAuto.png)
 - [Diagrama de agentes](Capitulo_4/DiagramaAgentes/DiagramaAgentes.svg)
-- [Código del flujo manual](Capitulo_4/CodigoFlujoManual/app.js.png)
-- [Código del flujo de agentes](Capitulo_4/CodigoFlujoAgentes/agent.py.png)
-- [Casos de uso relevantes](Capitulo_4/CasosUsoRelevantes/IntroducirDocumentacionFuncional/IntroducirDocumentacionFuncional.png)
-- [Estructura de carpetas](Capitulo_4/EstructuraCarpetas/App/App.png)
+
 
 ### Capítulo 5 - Evaluación y conclusiones
 
