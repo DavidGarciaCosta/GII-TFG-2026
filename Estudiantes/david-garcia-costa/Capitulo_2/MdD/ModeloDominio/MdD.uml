@@ -5,12 +5,23 @@ rectangle "Contexto organizativo" {
 }
 
 rectangle "Modelo de Dominio" {
+  rectangle Usuario
+  rectangle "Sesion de trabajo" as SesionTrabajo
   rectangle Documentacion
   rectangle CasoDeUso
   rectangle RequisitoFuncional
   rectangle EscenarioGherkin
   rectangle Borrador
   rectangle CasoPrueba
+
+  Usuario --> SesionTrabajo : crea/gestiona
+  SesionTrabajo --> Proyecto : refleja
+
+  SesionTrabajo o-- Documentacion : agrupa
+  SesionTrabajo o-- CasoDeUso : agrupa
+  SesionTrabajo o-- RequisitoFuncional : agrupa
+  SesionTrabajo o-- EscenarioGherkin : agrupa
+  SesionTrabajo o-- Borrador : contiene
 
   Proyecto o-- Documentacion
 
@@ -20,7 +31,7 @@ rectangle "Modelo de Dominio" {
   CasoDeUso -- RequisitoFuncional : traza
 
   EscenarioGherkin --> CasoDeUso : cubre/traza
-  EscenarioGherkin --> RequisitoFuncional : cubre / traza
+  EscenarioGherkin --> RequisitoFuncional : cubre/traza
 
   Borrador o-- EscenarioGherkin : contiene
 

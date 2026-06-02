@@ -2,11 +2,11 @@
 
 Este documento relaciona el ciclo de vida funcional del sistema con las pantallas que satisfacen los casos de uso mas importantes. El objetivo es facilitar la navegacion entre cada caso de uso, su pantalla asociada, su correspondencia MVC y las evidencias visuales de los flujos manual y automatico.
 
-## Diagrama de estado del ciclo de vida
+## Diagrama de Contexto
 
 El siguiente diagrama resume las acciones principales que puede realizar el sistema dentro del ciclo de vida funcional: introduccion de documentacion, gestion de artefactos, generacion de borradores, revision y publicacion.
 
-![Diagrama de estado del ciclo de vida](../Capitulo_2/CdU/DiagramaEstadoCicloVida/DiagramaEstadoCicloVida.svg)
+![Diagrama de Contexto](../Capitulo_2/CdU/DiagramaContexto/DiagramaContexto.svg)
 
 ## Indice de navegacion
 

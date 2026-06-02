@@ -2,6 +2,26 @@
 
 package "Sistema" {
 
+class Usuario {
+  +idUsuario: String
+  +nombreUsuario: String
+  +email: String
+  +rol: String
+  +fechaRegistro: Date
+}
+
+class SesionTrabajo {
+  +idSesion: String
+  +nombre: String
+  +descripcion: Text
+  +projectName: String
+  +modoTrabajo: String
+  +estado: String
+  +pasoActual: Integer
+  +fechaCreacion: Date
+  +fechaActualizacion: Date
+}
+
 class Documentacion {
   +idDocumentacion: String
   +tipoEntrada: String
@@ -58,8 +78,15 @@ class CasoPrueba {
   +estado: String
 }
 
-Documentacion  o-- CasoDeUso : origina
-Documentacion  o--  RequisitoFuncional : origina
+Usuario  ->  SesionTrabajo : crea / gestiona
+SesionTrabajo  o--  Documentacion : agrupa
+SesionTrabajo  o--  CasoDeUso : agrupa
+SesionTrabajo  o--  RequisitoFuncional : agrupa
+SesionTrabajo  o--  EscenarioGherkin : agrupa
+SesionTrabajo  o--  Borrador : contiene
+
+Documentacion  o-- CasoDeUso
+Documentacion  o--  RequisitoFuncional
 
 CasoDeUso  --  RequisitoFuncional : traza
 

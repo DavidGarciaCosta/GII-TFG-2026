@@ -9,7 +9,11 @@
 # Modelo de Dominio
 
 ## Descripción general
-En el contexto organizativo, el sistema parte de un **Proyecto**, que proporciona el marco al que debe quedar asociada toda **Documentación**. La documentación constituye el punto de entrada del sistema y puede presentarse en forma de DRF o DDS.
+En el contexto organizativo, el **Proyecto**, proporciona el contexto organizativo sobre el que se trabaja. Dentro del modelo de dominio aparece el **Usuario** en este caso el Ingeniero de QA, que crea y gestiona una **Sesión de trabajo**.
+
+La **Sesión de trabajo** representa el contenedor funcional del flujo. Una unidad de trabajo que agrupa la documentación, los casos de uso, los requisitos funcionales, los escenarios Gherkin y el borrador generado para casos de prueba.
+
+La **Documentación** constituye el punto de entrada del sistema y puede presentarse en forma de DRF o DDS. Cada documento queda asociado al proyecto y se incorpora a una sesión de trabajo concreta.
 
 A partir de la documentación se obtienen **Casos de Uso** y **Requisitos Funcionales**, que representan la base funcional del conocimiento extraído. Entre ambos se mantiene una relación de trazabilidad, ya que describen de forma complementaria el comportamiento esperado del sistema.
 
@@ -17,7 +21,7 @@ Sobre esta base se generan **Escenarios Gherkin**, que formalizan el comportamie
 
 Cuando un borrador es aceptado, el sistema deriva de él un **Caso de Prueba**, que representa el artefacto final del dominio. Este caso de prueba puede registrarse en **Kiwi TCMS**, que se modela como sistema externo participante. Kiwi TCMS no forma parte del núcleo del dominio, pero interviene en el flujo funcional global como repositorio externo de registro de casos de prueba.
 
-De este modo, el modelo mantiene la trazabilidad completa desde la documentación inicial hasta el caso de prueba final y por ende la publicacion posterior en Kiwi TCMS, distinguiendo claramente entre artefactos de análisis funcional, artefactos de revisión y artefactos finales de prueba.
+De este modo, el modelo mantiene la trazabilidad completa desde el usuario y su sesión de trabajo hasta la documentación inicial, los artefactos derivados y el caso de prueba final, incluyendo la publicacion posterior en Kiwi TCMS.
 
 ## Diagrama de Clases
 

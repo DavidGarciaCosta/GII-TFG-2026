@@ -1,6 +1,26 @@
 @startuml
 package "Sistema" {
 
+object usuario1 {
+  idUsuario = "USR-001"
+  nombreUsuario = "david.qa"
+  email = "david.qa@example.com"
+  rol = "Ingeniero QA"
+  fechaRegistro = "2026-04-07"
+}
+
+object sesion1 {
+  idSesion = "SES-001"
+  nombre = "Sesion gestor de incidencias"
+  descripcion = "Trabajo de extraccion y generacion de pruebas"
+  projectName = "Gestor de incidencias"
+  modoTrabajo = "manual"
+  estado = "activa"
+  pasoActual = 4
+  fechaCreacion = "2026-04-07"
+  fechaActualizacion = "2026-04-08"
+}
+
 object doc1 {
   idDocumentacion = "DOC-001"
   tipoEntrada = "DDS"
@@ -61,13 +81,19 @@ object kiwi1 {
   nombre = "Kiwi TCMS"
 }
 
+usuario1 -> sesion1 : crea / gestiona
+sesion1 o-- doc1 : agrupa
+sesion1 o-- uc1 : agrupa
+sesion1 o-- rf1 : agrupa
+sesion1 o-- eg1 : agrupa
+sesion1 o-- borrador1 : contiene
 doc1 o-- uc1
 doc1 o-- rf1
-uc1 -- rf1
-eg1 --> uc1
-eg1 --> rf1
-borrador1 o-- eg1
-caso1 --> borrador1
-caso1 --> kiwi1
+uc1 -- rf1 : traza
+eg1 --> uc1 : cubre / traza
+eg1 --> rf1 : cubre / traza
+borrador1 o-- eg1 : contiene
+caso1 --> borrador1 : deriva de
+caso1 --> kiwi1 : registrar
 
 @enduml

@@ -1,17 +1,86 @@
 @startuml
 left to right direction
-title Diagrama de contexto
 
-actor "Ingeniero de QA" as QA
+[*] --> SISTEMA_CERRADO
 
-rectangle "Sistema" as SISTEMA
-rectangle "Modelo de IA\n(OpenAI)" as MODELO
-rectangle "Kiwi TCMS\nSistema externo" as KIWI
+' === Autenticacion ===
+SISTEMA_CERRADO --> SESIONES_ABIERTAS : iniciarSesion()
+SISTEMA_CERRADO --> SESIONES_ABIERTAS : registrarCuenta()
+SESIONES_ABIERTAS --> SISTEMA_CERRADO : cerrarSesion()
 
-QA --> SISTEMA 
-QA --> KIWI
-MODELO --> SISTEMA
-SISTEMA --> MODELO : Consume modelo
-SISTEMA --> KIWI 
-KIWI --> SISTEMA 
+' === Sesiones ===
+SESIONES_ABIERTAS --> DOCUMENTACION_ABIERTA : seleccionarSesiones()
+SESIONES_ABIERTAS --> DOCUMENTACION_ABIERTA : crearNuevaSesion()
+SESIONES_ABIERTAS --> SESIONES_ABIERTAS : eliminarSesion()
+
+' === Documentacion ===
+DOCUMENTACION_ABIERTA --> DOCUMENTACION_ABIERTA : introducirDocumentacionFuncional()
+DOCUMENTACION_ABIERTA --> DOCUMENTACION_ABIERTA : asociarDocumentacionAProyecto()
+DOCUMENTACION_ABIERTA --> DOCUMENTACION_ABIERTA : consultarReferenciasDocumentacionProyecto()
+DOCUMENTACION_ABIERTA --> DOCUMENTACION_ABIERTA : listarDocumentacion()
+DOCUMENTACION_ABIERTA --> DOCUMENTACION_ABIERTA : consultarDocumentacion()
+DOCUMENTACION_ABIERTA --> DOCUMENTACION_ABIERTA : actualizarDocumentacion()
+DOCUMENTACION_ABIERTA --> DOCUMENTACION_ABIERTA : eliminarDocumentacion()
+DOCUMENTACION_ABIERTA --> DOCUMENTACION_ABIERTA : guardarResultados()
+
+DOCUMENTACION_ABIERTA --> CASOS_USO_ABIERTO : gestionarCdU()
+DOCUMENTACION_ABIERTA --> AGENTES_ABIERTO : crearTraspasoHaciaAgentes()
+
+' === Flujo de agentes (automatico) ===
+AGENTES_ABIERTO --> CASOS_USO_ABIERTO : iniciarFlujoAutomatico()
+AGENTES_ABIERTO --> DOCUMENTACION_ABIERTA : rechazarTraspaso()
+
+' === Casos de uso (flujo manual) ===
+CASOS_USO_ABIERTO --> DOCUMENTACION_ABIERTA : completarGestion()
+CASOS_USO_ABIERTO --> CASOS_USO_ABIERTO : listarCdU()
+CASOS_USO_ABIERTO --> CASOS_USO_ABIERTO : guardarResultados()
+
+CASOS_USO_ABIERTO --> CASO_USO_ABIERTO : consultarCdU()
+CASOS_USO_ABIERTO --> CASO_USO_ABIERTO : crearCdU()
+CASOS_USO_ABIERTO --> CASO_USO_ABIERTO : actualizarCdU()
+CASOS_USO_ABIERTO --> CASO_USO_ABIERTO : eliminarCdU()
+CASO_USO_ABIERTO --> CASOS_USO_ABIERTO : completarGestion()
+
+' === Requisitos funcionales ===
+CASOS_USO_ABIERTO --> REQUISITOS_FUNCIONALES_ABIERTO : gestionarRequisitosFuncionales()
+REQUISITOS_FUNCIONALES_ABIERTO --> CASOS_USO_ABIERTO : completarGestion()
+REQUISITOS_FUNCIONALES_ABIERTO --> REQUISITOS_FUNCIONALES_ABIERTO : listarRequisitosFuncionales()
+REQUISITOS_FUNCIONALES_ABIERTO --> REQUISITOS_FUNCIONALES_ABIERTO : guardarResultados()
+
+REQUISITOS_FUNCIONALES_ABIERTO --> REQUISITO_FUNCIONAL_ABIERTO : consultarRequisitoFuncional()
+REQUISITOS_FUNCIONALES_ABIERTO --> REQUISITO_FUNCIONAL_ABIERTO : crearRequisitoFuncional()
+REQUISITOS_FUNCIONALES_ABIERTO --> REQUISITO_FUNCIONAL_ABIERTO : actualizarRequisitoFuncional()
+REQUISITOS_FUNCIONALES_ABIERTO --> REQUISITO_FUNCIONAL_ABIERTO : eliminarRequisitoFuncional()
+REQUISITO_FUNCIONAL_ABIERTO --> REQUISITOS_FUNCIONALES_ABIERTO : completarGestion()
+
+' === Escenarios Gherkin ===
+CASOS_USO_ABIERTO --> ESCENARIOS_GHERKIN_ABIERTO : gestionarEscenariosGherkin()
+REQUISITOS_FUNCIONALES_ABIERTO --> ESCENARIOS_GHERKIN_ABIERTO : gestionarEscenariosGherkin()
+ESCENARIOS_GHERKIN_ABIERTO --> CASOS_USO_ABIERTO : completarGestion()
+ESCENARIOS_GHERKIN_ABIERTO --> REQUISITOS_FUNCIONALES_ABIERTO : completarGestion()
+ESCENARIOS_GHERKIN_ABIERTO --> ESCENARIOS_GHERKIN_ABIERTO : listarEscenariosGherkin()
+ESCENARIOS_GHERKIN_ABIERTO --> ESCENARIOS_GHERKIN_ABIERTO : crearEscenarioGherkin()
+ESCENARIOS_GHERKIN_ABIERTO --> ESCENARIOS_GHERKIN_ABIERTO : consultarEscenarioGherkin()
+ESCENARIOS_GHERKIN_ABIERTO --> ESCENARIOS_GHERKIN_ABIERTO : actualizarEscenarioGherkin()
+ESCENARIOS_GHERKIN_ABIERTO --> ESCENARIOS_GHERKIN_ABIERTO : eliminarEscenarioGherkin()
+
+' === Borradores ===
+ESCENARIOS_GHERKIN_ABIERTO --> BORRADORES_ABIERTO : crearBorradorCasoPrueba()
+BORRADORES_ABIERTO --> ESCENARIOS_GHERKIN_ABIERTO : completarGeneracion()
+BORRADORES_ABIERTO --> BORRADORES_ABIERTO : listarBorradores()
+BORRADORES_ABIERTO --> BORRADORES_ABIERTO : guardarResultados()
+
+BORRADORES_ABIERTO --> BORRADOR_ABIERTO : consultarBorrador()
+BORRADORES_ABIERTO --> BORRADOR_ABIERTO : anadirFeedbackBorrador()
+BORRADORES_ABIERTO --> BORRADOR_ABIERTO : rechazarBorrador()
+BORRADOR_ABIERTO --> BORRADOR_ABIERTO : guardarResultados()
+BORRADOR_ABIERTO --> BORRADORES_ABIERTO : completarGestion()
+
+' === Kiwi TCMS ===
+BORRADOR_ABIERTO --> KIWI_TCMS_ABIERTO : aceptarYPublicarCasoPruebaDesdeBorrador()
+KIWI_TCMS_ABIERTO --> KIWI_TCMS_ABIERTO : registrarCasoPrueba()
+KIWI_TCMS_ABIERTO --> BORRADOR_ABIERTO : completarPublicacion()
+KIWI_TCMS_ABIERTO --> KIWI_TCMS_ABIERTO : buscarCasosPruebaEnKiwiTCMS()
+KIWI_TCMS_ABIERTO --> KIWI_TCMS_ABIERTO : verCasoPruebaEnKiwiTCMS()
+
 @enduml
