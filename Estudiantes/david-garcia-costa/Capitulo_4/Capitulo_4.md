@@ -288,6 +288,82 @@ La solución se organiza en dos bloques principales: la aplicación manual y el 
 
 ![Estructura de carpetas de app](EstructuraCarpetas/App/App.png)
 
+## Comunicación entre la aplicación, los agentes y Kiwi TCMS
+
+### 1. Handoff desde app hacia agentes
+
+`POST /sessions/:id/handoff-to-agent`
+
+Este endpoint lo llama el frontend sobre `app` Express. El `id` va en la URL:
+
+`POST /sessions/682abf1e31f0dcb5f14d9123/handoff-to-agent`
+
+La aplicación valida que la sesión tenga proyecto y documentación. Después construye internamente este request hacia el agente:
+
+`POST /api/kiwi-mvc/handoff`
+
+![Código handoff](ComunicacionImagenes/CodigoHandoff.png)
+
+Response:
+
+![Código Response 1](<ComunicacionImagenes/CodigoResponse(1).png>)
+
+### 2. Cómo hacen request los agentes
+
+El único request HTTP interno importante es el que lanza el runtime ADK:
+
+`POST /run`
+
+![Código POST run](<ComunicacionImagenes/CodigoPOST_run .png>)
+
+Y para recuperar documentación, el agente usa una tool, no un endpoint REST:
+
+`get_kiwimvc_session_docs(source_session_id)`
+
+![Código get_kiwimvc_session_docs](ComunicacionImagenes/Codigo_get_kiwimvc_session_docs.png)
+
+### 3. Publicación en Kiwi desde agentes
+
+No hay endpoint REST propio tipo `/agent/publish`.
+
+La publicación automática se hace mediante tool interna:
+
+`publish_draft(summary, project_name)`
+
+Esta llama a:
+
+`upsert_testcase_uc`
+
+Y finalmente a Kiwi TCMS:
+
+`rpc.TestCase.create(payload)`
+
+Payload enviado a Kiwi:
+
+![Código Payload enviado a Kiwi 1](<ComunicacionImagenes/CodigoPayloadEnviadoKiwi(1).png>)
+
+Response interna:
+
+![Código Response 2](<ComunicacionImagenes/CodigoResponse(2).png>)
+
+### 4. Publicación manual en Kiwi
+
+`publishDraftToKiwi`
+
+![Código publishDraftToKiwi](<ComunicacionImagenes/CodigopublishDraftToKiwi .png>)
+
+Y después a Kiwi:
+
+`TestCase.create(payload)`
+
+Payload enviado a Kiwi:
+
+![Código TestCase.create 2](<ComunicacionImagenes/CodigoTestCaseCreate(2).png>)
+
+Response:
+
+![Código Response 3](<ComunicacionImagenes/CodigoResponse(3).png>)
+
 ## Plan contratado para la IA
 
 Por motivos de confidencialidad y acuerdos internos de empresa, no se dispone de información detallada sobre el plan exacto contratado con OpenAI ni sobre la facturación.

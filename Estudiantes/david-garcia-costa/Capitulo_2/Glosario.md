@@ -4,7 +4,7 @@
 
 Entidad que representa un contexto organizativo o funcional al que pertenece una documentacion.
 
-### Sesion
+### Sesion de Trabajo
 
 Contexto de trabajo seleccionado o creado desde la interfaz para organizar y continuar la interaccion del usuario con el sistema.
 Permite mantener agrupados los artefactos y resultados asociados a una misma actividad.

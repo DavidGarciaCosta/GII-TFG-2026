@@ -43,7 +43,7 @@
 - CU35. EliminarSesion
 - CU36. GuardarResultados
 - CU38. RegistrarCuenta
-- CU39. CrearTraspasoHaciaAgentes
+- CU39. CrearTraspasoFlujoAutomatico
 
 ### Actor Kiwi TCMS
 
@@ -90,7 +90,7 @@
 | RF11 | Gestion de sesiones de trabajo | CU33. SeleccionarSesiones |
 | RF11 | Gestion de sesiones de trabajo | CU34. CrearNuevaSesion |
 | RF11 | Gestion de sesiones de trabajo | CU35. EliminarSesion |
-| RF11 | Gestion de sesiones de trabajo | CU39. CrearTraspasoHaciaAgentes |
+| RF11 | Gestion de sesiones de trabajo | CU39. CrearTraspasoFlujoAutomatico |
 | RF12 | Almacenamiento de resultados | CU36. GuardarResultados |
 | RF13 | Trazabilidad funcional | CU03. IntroducirDocumentacion |
 | RF13 | Trazabilidad funcional | CU04. AsociarDocumentacionAProyecto |
@@ -108,8 +108,8 @@
 | RF13 | Trazabilidad funcional | CU33. SeleccionarSesiones |
 | RF13 | Trazabilidad funcional | CU34. CrearNuevaSesion |
 | RF13 | Trazabilidad funcional | CU36. GuardarResultados |
-| RF13 | Trazabilidad funcional | CU39. CrearTraspasoHaciaAgentes |
-| RF14 | Traspaso hacia los agentes | CU39. CrearTraspasoHaciaAgentes |
+| RF13 | Trazabilidad funcional | CU39. CrearTraspasoFlujoAutomatico |
+| RF14 | Traspaso hacia los agentes | CU39. CrearTraspasoFlujoAutomatico |
 
 ## Matriz de requisitos no funcionales
 
@@ -125,7 +125,7 @@
 | RNF01 | Consistencia | CU25. CrearBorradorCasoPrueba |
 | RNF01 | Consistencia | CU28. AnadirFeedbackBorrador |
 | RNF01 | Consistencia | CU30. AceptarYPublicarCasoPruebaDesdeBorrador |
-| RNF01 | Consistencia | CU39. CrearTraspasoHaciaAgentes |
+| RNF01 | Consistencia | CU39. CrearTraspasoFlujoAutomatico |
 | RNF02 | Trazabilidad | CU03. IntroducirDocumentacion |
 | RNF02 | Trazabilidad | CU04. AsociarDocumentacionAProyecto |
 | RNF02 | Trazabilidad | CU05. ConsultarReferenciasDocumentacionProyecto |
@@ -142,7 +142,7 @@
 | RNF02 | Trazabilidad | CU33. SeleccionarSesiones |
 | RNF02 | Trazabilidad | CU34. CrearNuevaSesion |
 | RNF02 | Trazabilidad | CU36. GuardarResultados |
-| RNF02 | Trazabilidad | CU39. CrearTraspasoHaciaAgentes |
+| RNF02 | Trazabilidad | CU39. CrearTraspasoFlujoAutomatico |
 | RNF03 | Usabilidad | CU38. RegistrarCuenta |
 | RNF03 | Usabilidad | CU01. IniciarSesion |
 | RNF03 | Usabilidad | CU02. CerrarSesion |
@@ -162,12 +162,12 @@
 | RNF03 | Usabilidad | CU33. SeleccionarSesiones |
 | RNF03 | Usabilidad | CU34. CrearNuevaSesion |
 | RNF03 | Usabilidad | CU36. GuardarResultados |
-| RNF03 | Usabilidad | CU39. CrearTraspasoHaciaAgentes |
+| RNF03 | Usabilidad | CU39. CrearTraspasoFlujoAutomatico |
 | RNF04 | Integracion | CU30. AceptarYPublicarCasoPruebaDesdeBorrador |
 | RNF04 | Integracion | CU31. BuscarCasoPruebaKiwi |
 | RNF04 | Integracion | CU32. VerCasoPruebaKiwi |
 | RNF04 | Integracion | CU37. RegistrarCasoPruebaKiwi |
-| RNF04 | Integracion | CU39. CrearTraspasoHaciaAgentes |
+| RNF04 | Integracion | CU39. CrearTraspasoFlujoAutomatico |
 | RNF05 | Mantenibilidad | CU03. IntroducirDocumentacion |
 | RNF05 | Mantenibilidad | CU04. AsociarDocumentacionAProyecto |
 | RNF05 | Mantenibilidad | CU08. ActualizarDocumentacion |
@@ -177,12 +177,12 @@
 | RNF05 | Mantenibilidad | CU25. CrearBorradorCasoPrueba |
 | RNF05 | Mantenibilidad | CU30. AceptarYPublicarCasoPruebaDesdeBorrador |
 | RNF05 | Mantenibilidad | CU36. GuardarResultados |
-| RNF05 | Mantenibilidad | CU39. CrearTraspasoHaciaAgentes |
+| RNF05 | Mantenibilidad | CU39. CrearTraspasoFlujoAutomatico |
 | RNF06 | Extensibilidad | CU03. IntroducirDocumentacion |
 | RNF06 | Extensibilidad | CU04. AsociarDocumentacionAProyecto |
 | RNF06 | Extensibilidad | CU21. CrearEscenarioGherkin |
 | RNF06 | Extensibilidad | CU30. AceptarYPublicarCasoPruebaDesdeBorrador |
-| RNF06 | Extensibilidad | CU39. CrearTraspasoHaciaAgentes |
+| RNF06 | Extensibilidad | CU39. CrearTraspasoFlujoAutomatico |
 | RNF07 | Identificacion de contexto | CU03. IntroducirDocumentacion |
 | RNF07 | Identificacion de contexto | CU04. AsociarDocumentacionAProyecto |
 | RNF07 | Identificacion de contexto | CU05. ConsultarReferenciasDocumentacionProyecto |
@@ -192,7 +192,7 @@
 | RNF07 | Identificacion de contexto | CU33. SeleccionarSesiones |
 | RNF07 | Identificacion de contexto | CU34. CrearNuevaSesion |
 | RNF07 | Identificacion de contexto | CU36. GuardarResultados |
-| RNF07 | Identificacion de contexto | CU39. CrearTraspasoHaciaAgentes |
+| RNF07 | Identificacion de contexto | CU39. CrearTraspasoFlujoAutomatico |
 
 ---
 

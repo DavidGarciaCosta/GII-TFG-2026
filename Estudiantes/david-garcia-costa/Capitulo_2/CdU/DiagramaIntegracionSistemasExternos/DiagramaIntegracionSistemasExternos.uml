@@ -1,6 +1,6 @@
 @startuml
 left to right direction
-title Diagrama de contexto
+title Diagrama Integracion Sistemas Externos
 
 actor "Ingeniero de QA" as QA
 

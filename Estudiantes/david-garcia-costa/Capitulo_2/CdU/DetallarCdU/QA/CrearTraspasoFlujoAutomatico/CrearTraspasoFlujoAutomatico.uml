@@ -1,8 +1,8 @@
-@startuml CrearTraspasoHaciaAgentes
+@startuml CrearTraspasoFlujoAutomatico
 
 skinparam linetype polyline
 
-state crearTraspasoHaciaAgentes as "crearTraspasoHaciaAgentes()" {
+state crearTraspasoFlujoAutomatico as "crearTraspasoFlujoAutomatico()" {
 
     state " " as ValidandoSesion
     state " " as CreandoTraspaso
@@ -40,12 +40,12 @@ state crearTraspasoHaciaAgentes as "crearTraspasoHaciaAgentes()" {
     end note
 }
 
-crearTraspasoHaciaAgentes -[#green]-> AGENTES_ABIERTO
+crearTraspasoFlujoAutomatico -[#green]-> AGENTES_ABIERTO
 note on link
 completarTraspaso()
 end note
 
-crearTraspasoHaciaAgentes -[#red]-> SESION_ABIERTA
+crearTraspasoFlujoAutomatico -[#red]-> SESION_ABIERTA
 note on link
 rechazarTraspaso()
 end note

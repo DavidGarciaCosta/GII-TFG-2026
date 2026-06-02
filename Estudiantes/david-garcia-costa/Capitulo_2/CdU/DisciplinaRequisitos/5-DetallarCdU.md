@@ -424,14 +424,14 @@ En esta seccion se detallan los casos de uso del sistema desde el punto de vista
 
 ---
 
-## CU39. Crear traspaso hacia los agentes
+## CU39. Crear traspaso al flujo automatico
 - **Actor:** Ingeniero de QA
 - **Descripcion:** Permite transferir una sesion con documentacion al entorno de agentes para preparar artefactos y borradores de forma automatica.
 - **Precondiciones:** El actor ha iniciado sesion, existe una sesion con proyecto y hay documentacion asociada.
 - **Flujo principal:** 1. El actor elige continuar con el flujo de agentes. 2. El sistema valida que la sesion tenga proyecto y documentacion. 3. El sistema crea el traspaso al entorno de agentes. 4. El entorno de agentes recupera la documentacion de la sesion y prepara artefactos derivados. 5. El sistema guarda la referencia al entorno de agentes y marca la sesion como automatica. 6. El actor puede abrir el entorno de agentes para continuar la revision.
 - **Casos de Error:** Sesion no encontrada, proyecto vacio, sesion sin documentacion o entorno de agentes no disponible.
 - **Postcondiciones:** La sesion queda en modo automatico y el actor puede continuar el trabajo desde el entorno de agentes.
-- **Diagrama:** ![Crear traspaso hacia los agentes](/Estudiantes/david-garcia-costa/Capitulo_2/CdU/DetallarCdU/QA/CrearTraspasoHaciaAgentes/CrearTraspasoHaciaAgentes.svg)
+- **Diagrama:** ![Crear traspaso al flujo automatico](/Estudiantes/david-garcia-costa/Capitulo_2/CdU/DetallarCdU/QA/CrearTraspasoFlujoAutomatico/CrearTraspasoFlujoAutomatico.svg)
 
 ---
 

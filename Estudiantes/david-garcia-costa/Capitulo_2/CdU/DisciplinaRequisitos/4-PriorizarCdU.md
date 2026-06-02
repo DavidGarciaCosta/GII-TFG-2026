@@ -12,7 +12,7 @@
 | CU21 | Crear escenario Gherkin | Ingeniero de QA | Alta |
 | CU25 | Crear borrador de caso de prueba | Ingeniero de QA | Alta |
 | CU30 | Aceptar y publicar caso de prueba a partir de borrador | Ingeniero de QA | Alta |
-| CU39 | Crear traspaso hacia los agentes | Ingeniero de QA | Alta |
+| CU39 | Crear traspaso al flujo automatico | Ingeniero de QA | Alta |
 | CU37 | Registrar caso de prueba en Kiwi TCMS | Kiwi TCMS | Alta |
 | CU04 | Asociar documentacion a proyecto | Ingeniero de QA | Alta |
 | CU08 | Actualizar documentacion | Ingeniero de QA | Alta |

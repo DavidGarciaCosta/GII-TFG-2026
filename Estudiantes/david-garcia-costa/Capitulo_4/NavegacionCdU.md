@@ -59,7 +59,7 @@ El siguiente diagrama resume las acciones principales que puede realizar el sist
 - **Flujo principal:** 1. El actor elige continuar con el flujo de agentes. 2. El sistema valida que la sesion tenga proyecto y documentacion. 3. El sistema crea el traspaso al entorno de agentes. 4. El entorno de agentes recupera la documentacion de la sesion y prepara artefactos derivados. 5. El sistema guarda la referencia al entorno de agentes y marca la sesion como automatica. 6. El actor puede abrir el entorno de agentes para continuar la revision.
 - **Casos de Error:** Sesion no encontrada, proyecto vacio, sesion sin documentacion o entorno de agentes no disponible.
 - **Postcondiciones:** La sesion queda en modo automatico y el actor puede continuar el trabajo desde el entorno de agentes.
-- **Diagrama de detalle:** ![Crear traspaso hacia los agentes](../Capitulo_2/CdU/DetallarCdU/QA/CrearTraspasoHaciaAgentes/CrearTraspasoHaciaAgentes.svg)
+- **Diagrama de detalle:** ![Crear traspaso al flujo automatico](../Capitulo_2/CdU/DetallarCdU/QA/CrearTraspasoFlujoAutomatico/CrearTraspasoFlujoAutomatico.svg)
 
 
 ### MVC UC-39
