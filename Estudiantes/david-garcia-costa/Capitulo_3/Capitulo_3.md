@@ -782,7 +782,6 @@ La estructura de paquetes de `app` sigue el patrón MVC:
 
 ---
 
-[← Volver al Índice](../README.md)
 
 ## 14. Diagramas Secuencia: Casos de Uso + Relevantes
 ### Introducir Documentación Funcional
@@ -799,3 +798,5 @@ La estructura de paquetes de `app` sigue el patrón MVC:
 ![Diagramas Secuencia6](./DiagramaSecuencia/CrearBorrador/CrearBorrador.svg)
 ### Publicar Caso de Prueba A Partir de Borrador
 ![Diagramas Secuencia7](./DiagramaSecuencia/PublicarCasoPrueba/PublicarCasoPrueba.svg)
+
+[← Volver al Índice](../README.md)
