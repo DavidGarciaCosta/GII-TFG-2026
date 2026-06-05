@@ -1,0 +1,19 @@
+@startuml
+actor "Ingeniero QA" as QA
+boundary "UseCaseView" as Vista
+control "UseCaseController.create" as Controller
+entity "UseCase" as UseCase
+entity "Session" as Session
+database "MongoDB\n(usecases)" as BD
+
+QA -> Vista : Introducir nombre, descripción,\nactores, condiciones y flujos
+Vista -> Controller : POST /api/use-cases
+Controller -> Session : validar sesión manual
+Session --> Controller : sesión válida
+Controller -> UseCase : validar datos y crear ucId
+UseCase --> Controller : caso de uso válido
+Controller -> BD : UseCase.create()
+BD --> Controller : caso de uso creado
+Controller --> Vista : respuesta OK
+Vista --> QA : Caso de uso registrado
+@enduml

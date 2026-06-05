@@ -3,7 +3,7 @@ skinparam packageStyle rectangle
 skinparam shadowing false
 skinparam classAttributeIconSize 0
 
-title CU-39 - Crear traspaso al flujo automatico
+title CU-36 - Crear traspaso al flujo automatico
 
 package "Vista" {
   class AutomaticModeView

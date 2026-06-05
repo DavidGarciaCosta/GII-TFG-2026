@@ -1,0 +1,34 @@
+@startuml
+actor "Ingeniero QA" as QA
+boundary "SessionView" as Vista
+control "SessionController.handoffToAgent" as Controller
+control "SessionService" as SessionService
+entity "Session" as Session
+entity "Documentation" as Documentation
+database "MongoDB" as BD
+control "agent\nPOST /api/kiwi-mvc/handoff" as Agent
+control "draft_pipeline_agent" as Pipeline
+control "extract_uc_rf_agent" as Extract
+control "kiwi_gherkin_agent" as GherkinAgent
+
+QA -> Vista : Seleccionar flujo automático
+Vista -> Controller : POST /api/sessions/:id/handoff-to-agent
+Controller -> SessionService : validar sesión y proyecto
+SessionService -> Session : comprobar sessionId
+Session --> SessionService : sesión válida
+SessionService -> Documentation : recuperar documentación asociada
+Documentation --> SessionService : documentación funcional
+SessionService --> Controller : datos preparados
+Controller -> Agent : enviar sessionId, projectName\ny documentación
+Agent -> Pipeline : ejecutar flujo automático
+Pipeline -> Extract : extraer casos de uso y requisitos
+Extract --> Pipeline : JSON con CU y RF
+Pipeline -> GherkinAgent : generar escenarios y borradores
+GherkinAgent --> Pipeline : artefactos generados
+Pipeline --> Agent : resultado automático
+Agent --> Controller : CU, RF, Gherkin y borradores
+Controller -> BD : guardar resultados y marcar sesión automática
+BD --> Controller : resultados guardados
+Controller --> Vista : respuesta OK
+Vista --> QA : Sesión transferida al flujo automático
+@enduml

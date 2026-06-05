@@ -1,8 +1,8 @@
-@startuml AceptarYPublicarCasoPruebaBorrador
+@startuml PublicarCasoPruebaBorrador
 
 skinparam linetype polyline
 
-state aceptarYPublicarCasoPruebaBorrador as "aceptarYPublicarCasoPruebaBorrador()" {
+state publicarCasoPruebaBorrador as "publicarCasoPruebaBorrador()" {
 
     state " " as ConsultandoBorrador
     state " " as AceptandoBorrador
@@ -40,12 +40,12 @@ state aceptarYPublicarCasoPruebaBorrador as "aceptarYPublicarCasoPruebaBorrador(
     end note
 }
 
-aceptarYPublicarCasoPruebaBorrador -[#green]-> KIWI_TCMS_ABIERTO
+publicarCasoPruebaBorrador -[#green]-> KIWI_TCMS_ABIERTO
 note on link
 completarPublicacion()
 end note
 
-aceptarYPublicarCasoPruebaBorrador -[#red]-> BORRADOR_ABIERTO
+publicarCasoPruebaBorrador -[#red]-> BORRADOR_ABIERTO
 note on link
 rechazarPublicacion()
 end note

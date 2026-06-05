@@ -1,0 +1,24 @@
+@startuml
+actor "Ingeniero QA" as QA
+boundary "DraftView" as Vista
+control "DraftController.assemble" as Controller
+entity "UseCase" as UseCase
+entity "FunctionalRequirement" as RF
+entity "GherkinScenario" as Scenario
+entity "Draft" as Draft
+database "MongoDB\n(drafts)" as BD
+
+QA -> Vista : Solicitar crear borrador
+Vista -> Controller : POST /api/drafts/assemble
+Controller -> UseCase : recuperar casos de uso de sesión
+UseCase --> Controller : usecases
+Controller -> RF : recuperar requisitos funcionales
+RF --> Controller : functionalrequirements
+Controller -> Scenario : recuperar escenarios Gherkin
+Scenario --> Controller : gherkinscenarios
+Controller -> Draft : construir borrador con resumen,\nprioridad, categoría y contenido
+Draft -> BD : Draft.create()
+BD --> Controller : borrador creado
+Controller --> Vista : respuesta OK
+Vista --> QA : Borrador disponible para revisión
+@enduml

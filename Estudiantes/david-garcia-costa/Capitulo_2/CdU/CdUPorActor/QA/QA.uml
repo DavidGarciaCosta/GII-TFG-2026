@@ -39,16 +39,14 @@ rectangle "Sistema" {
   usecase "Consultar\nborrador" as CU27
   usecase "Anadir feedback\na borrador" as CU28
   usecase "Rechazar\nborrador" as CU29
-  usecase "Aceptar y publicar caso de prueba\na partir de borrador" as CU30
+  usecase "Publicar caso de prueba\na partir de borrador" as CU30
 
-  usecase "Buscar casos de prueba\nen Kiwi TCMS" as CU31
-  usecase "Ver caso de prueba\nen Kiwi TCMS" as CU32
-  usecase "Seleccionar\nsesiones" as CU33
-  usecase "Crear nueva\nsesion" as CU34
-  usecase "Eliminar\nsesion" as CU35
-  usecase "Guardar\nresultados" as CU36
-  usecase "Registrar\ncuenta" as CU38
-  usecase "Crear traspaso\nal flujo automatico" as CU39
+  usecase "Seleccionar\nsesiones" as CU31
+  usecase "Crear nueva\nsesion" as CU32
+  usecase "Eliminar\nsesion" as CU33
+  usecase "Guardar\nresultados" as CU34
+  usecase "Registrar\ncuenta" as CU35
+  usecase "Crear traspaso\nal flujo automatico" as CU36
 }
 
 QA --> CU01
@@ -87,6 +85,4 @@ QA --> CU33
 QA --> CU34
 QA --> CU35
 QA --> CU36
-QA --> CU38
-QA --> CU39
 @enduml

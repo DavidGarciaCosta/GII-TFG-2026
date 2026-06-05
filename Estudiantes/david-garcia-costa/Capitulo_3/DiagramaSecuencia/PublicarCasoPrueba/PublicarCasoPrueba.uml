@@ -1,0 +1,22 @@
+@startuml
+actor "Ingeniero QA" as QA
+boundary "DraftView" as Vista
+control "DraftController.publish" as Controller
+control "ManualKiwiService" as KiwiService
+entity "Draft" as Draft
+database "MongoDB\n(drafts)" as BD
+database "Kiwi TCMS\n(TestCase.create)" as Kiwi
+
+QA -> Vista : Confirmar publicación del borrador
+Vista -> Controller : POST /api/drafts/:id/publish
+Controller -> Draft : obtener borrador por id
+Draft --> Controller : contenido del borrador
+Controller -> KiwiService : publishDraftToKiwi(summary, content)
+KiwiService -> Kiwi : TestCase.create()
+Kiwi --> KiwiService : idCasoPrueba
+KiwiService --> Controller : publicación correcta
+Controller -> BD : marcar borrador como publicado\npublishedTestCaseId = idCasoPrueba
+BD --> Controller : actualización correcta
+Controller --> Vista : respuesta OK
+Vista --> QA : Caso de prueba publicado en Kiwi TCMS
+@enduml

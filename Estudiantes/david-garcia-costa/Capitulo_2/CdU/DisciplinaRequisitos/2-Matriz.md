@@ -35,15 +35,13 @@
 - CU27. ConsultarBorrador
 - CU28. AnadirFeedbackBorrador
 - CU29. RechazarBorrador
-- CU30. AceptarYPublicarCasoPruebaDesdeBorrador
-- CU31. BuscarCasoPruebaKiwi
-- CU32. VerCasoPruebaKiwi
-- CU33. SeleccionarSesiones
-- CU34. CrearNuevaSesion
-- CU35. EliminarSesion
-- CU36. GuardarResultados
-- CU38. RegistrarCuenta
-- CU39. CrearTraspasoFlujoAutomatico
+- CU30. PublicarCasoPruebaDesdeBorrador
+- CU31. SeleccionarSesiones
+- CU32. CrearNuevaSesion
+- CU33. EliminarSesion
+- CU34. GuardarResultados
+- CU35. RegistrarCuenta
+- CU36. CrearTraspasoFlujoAutomatico
 
 ### Actor Kiwi TCMS
 
@@ -53,7 +51,7 @@
 
 | Requisito | Titulo | Caso de uso |
 |---|---|---|
-| RF01 | Autenticacion y registro | CU38. RegistrarCuenta |
+| RF01 | Autenticacion y registro | CU35. RegistrarCuenta |
 | RF01 | Autenticacion y registro | CU01. IniciarSesion |
 | RF01 | Autenticacion y registro | CU02. CerrarSesion |
 | RF02 | Introduccion de documentacion funcional | CU03. IntroducirDocumentacion |
@@ -83,15 +81,13 @@
 | RF08 | Gestion de borradores | CU27. ConsultarBorrador |
 | RF08 | Gestion de borradores | CU28. AnadirFeedbackBorrador |
 | RF08 | Gestion de borradores | CU29. RechazarBorrador |
-| RF09 | Aceptacion y publicacion de casos de prueba | CU30. AceptarYPublicarCasoPruebaDesdeBorrador |
+| RF09 | Aceptacion y publicacion de casos de prueba | CU30. PublicarCasoPruebaDesdeBorrador |
 | RF09 | Aceptacion y publicacion de casos de prueba | CU37. RegistrarCasoPruebaKiwi |
-| RF10 | Consulta en Kiwi TCMS | CU31. BuscarCasoPruebaKiwi |
-| RF10 | Consulta en Kiwi TCMS | CU32. VerCasoPruebaKiwi |
-| RF11 | Gestion de sesiones de trabajo | CU33. SeleccionarSesiones |
-| RF11 | Gestion de sesiones de trabajo | CU34. CrearNuevaSesion |
-| RF11 | Gestion de sesiones de trabajo | CU35. EliminarSesion |
-| RF11 | Gestion de sesiones de trabajo | CU39. CrearTraspasoFlujoAutomatico |
-| RF12 | Almacenamiento de resultados | CU36. GuardarResultados |
+| RF11 | Gestion de sesiones de trabajo | CU31. SeleccionarSesiones |
+| RF11 | Gestion de sesiones de trabajo | CU32. CrearNuevaSesion |
+| RF11 | Gestion de sesiones de trabajo | CU33. EliminarSesion |
+| RF11 | Gestion de sesiones de trabajo | CU36. CrearTraspasoFlujoAutomatico |
+| RF12 | Almacenamiento de resultados | CU34. GuardarResultados |
 | RF13 | Trazabilidad funcional | CU03. IntroducirDocumentacion |
 | RF13 | Trazabilidad funcional | CU04. AsociarDocumentacionAProyecto |
 | RF13 | Trazabilidad funcional | CU05. ConsultarReferenciasDocumentacionProyecto |
@@ -102,14 +98,12 @@
 | RF13 | Trazabilidad funcional | CU22. ConsultarEscenarioGherkin |
 | RF13 | Trazabilidad funcional | CU25. CrearBorradorCasoPrueba |
 | RF13 | Trazabilidad funcional | CU27. ConsultarBorrador |
-| RF13 | Trazabilidad funcional | CU30. AceptarYPublicarCasoPruebaDesdeBorrador |
-| RF13 | Trazabilidad funcional | CU31. BuscarCasoPruebaKiwi |
-| RF13 | Trazabilidad funcional | CU32. VerCasoPruebaKiwi |
-| RF13 | Trazabilidad funcional | CU33. SeleccionarSesiones |
-| RF13 | Trazabilidad funcional | CU34. CrearNuevaSesion |
-| RF13 | Trazabilidad funcional | CU36. GuardarResultados |
-| RF13 | Trazabilidad funcional | CU39. CrearTraspasoFlujoAutomatico |
-| RF14 | Traspaso hacia los agentes | CU39. CrearTraspasoFlujoAutomatico |
+| RF13 | Trazabilidad funcional | CU30. PublicarCasoPruebaDesdeBorrador |
+| RF13 | Trazabilidad funcional | CU31. SeleccionarSesiones |
+| RF13 | Trazabilidad funcional | CU32. CrearNuevaSesion |
+| RF13 | Trazabilidad funcional | CU34. GuardarResultados |
+| RF13 | Trazabilidad funcional | CU36. CrearTraspasoFlujoAutomatico |
+| RF14 | Traspaso hacia los agentes | CU36. CrearTraspasoFlujoAutomatico |
 
 ## Matriz de requisitos no funcionales
 
@@ -124,8 +118,8 @@
 | RNF01 | Consistencia | CU23. ActualizarEscenarioGherkin |
 | RNF01 | Consistencia | CU25. CrearBorradorCasoPrueba |
 | RNF01 | Consistencia | CU28. AnadirFeedbackBorrador |
-| RNF01 | Consistencia | CU30. AceptarYPublicarCasoPruebaDesdeBorrador |
-| RNF01 | Consistencia | CU39. CrearTraspasoFlujoAutomatico |
+| RNF01 | Consistencia | CU30. PublicarCasoPruebaDesdeBorrador |
+| RNF01 | Consistencia | CU36. CrearTraspasoFlujoAutomatico |
 | RNF02 | Trazabilidad | CU03. IntroducirDocumentacion |
 | RNF02 | Trazabilidad | CU04. AsociarDocumentacionAProyecto |
 | RNF02 | Trazabilidad | CU05. ConsultarReferenciasDocumentacionProyecto |
@@ -136,14 +130,12 @@
 | RNF02 | Trazabilidad | CU22. ConsultarEscenarioGherkin |
 | RNF02 | Trazabilidad | CU25. CrearBorradorCasoPrueba |
 | RNF02 | Trazabilidad | CU27. ConsultarBorrador |
-| RNF02 | Trazabilidad | CU30. AceptarYPublicarCasoPruebaDesdeBorrador |
-| RNF02 | Trazabilidad | CU31. BuscarCasoPruebaKiwi |
-| RNF02 | Trazabilidad | CU32. VerCasoPruebaKiwi |
-| RNF02 | Trazabilidad | CU33. SeleccionarSesiones |
-| RNF02 | Trazabilidad | CU34. CrearNuevaSesion |
-| RNF02 | Trazabilidad | CU36. GuardarResultados |
-| RNF02 | Trazabilidad | CU39. CrearTraspasoFlujoAutomatico |
-| RNF03 | Usabilidad | CU38. RegistrarCuenta |
+| RNF02 | Trazabilidad | CU30. PublicarCasoPruebaDesdeBorrador |
+| RNF02 | Trazabilidad | CU31. SeleccionarSesiones |
+| RNF02 | Trazabilidad | CU32. CrearNuevaSesion |
+| RNF02 | Trazabilidad | CU34. GuardarResultados |
+| RNF02 | Trazabilidad | CU36. CrearTraspasoFlujoAutomatico |
+| RNF03 | Usabilidad | CU35. RegistrarCuenta |
 | RNF03 | Usabilidad | CU01. IniciarSesion |
 | RNF03 | Usabilidad | CU02. CerrarSesion |
 | RNF03 | Usabilidad | CU03. IntroducirDocumentacion |
@@ -157,17 +149,13 @@
 | RNF03 | Usabilidad | CU22. ConsultarEscenarioGherkin |
 | RNF03 | Usabilidad | CU26. ListarBorradores |
 | RNF03 | Usabilidad | CU27. ConsultarBorrador |
-| RNF03 | Usabilidad | CU31. BuscarCasoPruebaKiwi |
-| RNF03 | Usabilidad | CU32. VerCasoPruebaKiwi |
-| RNF03 | Usabilidad | CU33. SeleccionarSesiones |
-| RNF03 | Usabilidad | CU34. CrearNuevaSesion |
-| RNF03 | Usabilidad | CU36. GuardarResultados |
-| RNF03 | Usabilidad | CU39. CrearTraspasoFlujoAutomatico |
-| RNF04 | Integracion | CU30. AceptarYPublicarCasoPruebaDesdeBorrador |
-| RNF04 | Integracion | CU31. BuscarCasoPruebaKiwi |
-| RNF04 | Integracion | CU32. VerCasoPruebaKiwi |
+| RNF03 | Usabilidad | CU31. SeleccionarSesiones |
+| RNF03 | Usabilidad | CU32. CrearNuevaSesion |
+| RNF03 | Usabilidad | CU34. GuardarResultados |
+| RNF03 | Usabilidad | CU36. CrearTraspasoFlujoAutomatico |
+| RNF04 | Integracion | CU30. PublicarCasoPruebaDesdeBorrador |
 | RNF04 | Integracion | CU37. RegistrarCasoPruebaKiwi |
-| RNF04 | Integracion | CU39. CrearTraspasoFlujoAutomatico |
+| RNF04 | Integracion | CU36. CrearTraspasoFlujoAutomatico |
 | RNF05 | Mantenibilidad | CU03. IntroducirDocumentacion |
 | RNF05 | Mantenibilidad | CU04. AsociarDocumentacionAProyecto |
 | RNF05 | Mantenibilidad | CU08. ActualizarDocumentacion |
@@ -175,24 +163,24 @@
 | RNF05 | Mantenibilidad | CU17. CrearRequisitoFuncional |
 | RNF05 | Mantenibilidad | CU21. CrearEscenarioGherkin |
 | RNF05 | Mantenibilidad | CU25. CrearBorradorCasoPrueba |
-| RNF05 | Mantenibilidad | CU30. AceptarYPublicarCasoPruebaDesdeBorrador |
-| RNF05 | Mantenibilidad | CU36. GuardarResultados |
-| RNF05 | Mantenibilidad | CU39. CrearTraspasoFlujoAutomatico |
+| RNF05 | Mantenibilidad | CU30. PublicarCasoPruebaDesdeBorrador |
+| RNF05 | Mantenibilidad | CU34. GuardarResultados |
+| RNF05 | Mantenibilidad | CU36. CrearTraspasoFlujoAutomatico |
 | RNF06 | Extensibilidad | CU03. IntroducirDocumentacion |
 | RNF06 | Extensibilidad | CU04. AsociarDocumentacionAProyecto |
 | RNF06 | Extensibilidad | CU21. CrearEscenarioGherkin |
-| RNF06 | Extensibilidad | CU30. AceptarYPublicarCasoPruebaDesdeBorrador |
-| RNF06 | Extensibilidad | CU39. CrearTraspasoFlujoAutomatico |
+| RNF06 | Extensibilidad | CU30. PublicarCasoPruebaDesdeBorrador |
+| RNF06 | Extensibilidad | CU36. CrearTraspasoFlujoAutomatico |
 | RNF07 | Identificacion de contexto | CU03. IntroducirDocumentacion |
 | RNF07 | Identificacion de contexto | CU04. AsociarDocumentacionAProyecto |
 | RNF07 | Identificacion de contexto | CU05. ConsultarReferenciasDocumentacionProyecto |
 | RNF07 | Identificacion de contexto | CU20. ListarEscenariosGherkin |
 | RNF07 | Identificacion de contexto | CU25. CrearBorradorCasoPrueba |
-| RNF07 | Identificacion de contexto | CU30. AceptarYPublicarCasoPruebaDesdeBorrador |
-| RNF07 | Identificacion de contexto | CU33. SeleccionarSesiones |
-| RNF07 | Identificacion de contexto | CU34. CrearNuevaSesion |
-| RNF07 | Identificacion de contexto | CU36. GuardarResultados |
-| RNF07 | Identificacion de contexto | CU39. CrearTraspasoFlujoAutomatico |
+| RNF07 | Identificacion de contexto | CU30. PublicarCasoPruebaDesdeBorrador |
+| RNF07 | Identificacion de contexto | CU31. SeleccionarSesiones |
+| RNF07 | Identificacion de contexto | CU32. CrearNuevaSesion |
+| RNF07 | Identificacion de contexto | CU34. GuardarResultados |
+| RNF07 | Identificacion de contexto | CU36. CrearTraspasoFlujoAutomatico |
 
 ---
 

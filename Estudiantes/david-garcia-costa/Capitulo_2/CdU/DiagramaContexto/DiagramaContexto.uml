@@ -77,10 +77,8 @@ BORRADOR_ABIERTO --> BORRADOR_ABIERTO : guardarResultados()
 BORRADOR_ABIERTO --> BORRADORES_ABIERTO : completarGestion()
 
 ' === Kiwi TCMS ===
-BORRADOR_ABIERTO --> KIWI_TCMS_ABIERTO : aceptarYPublicarCasoPruebaDesdeBorrador()
+BORRADOR_ABIERTO --> KIWI_TCMS_ABIERTO : publicarCasoPruebaApartirBorrador()
 KIWI_TCMS_ABIERTO --> KIWI_TCMS_ABIERTO : registrarCasoPrueba()
 KIWI_TCMS_ABIERTO --> BORRADOR_ABIERTO : completarPublicacion()
-KIWI_TCMS_ABIERTO --> KIWI_TCMS_ABIERTO : buscarCasosPruebaEnKiwiTCMS()
-KIWI_TCMS_ABIERTO --> KIWI_TCMS_ABIERTO : verCasoPruebaEnKiwiTCMS()
 
 @enduml

@@ -11,15 +11,15 @@
 | CU17 | Crear requisito funcional | Ingeniero de QA | Alta |
 | CU21 | Crear escenario Gherkin | Ingeniero de QA | Alta |
 | CU25 | Crear borrador de caso de prueba | Ingeniero de QA | Alta |
-| CU30 | Aceptar y publicar caso de prueba a partir de borrador | Ingeniero de QA | Alta |
-| CU39 | Crear traspaso al flujo automatico | Ingeniero de QA | Alta |
+| CU30 | Publicar caso de prueba a partir de borrador | Ingeniero de QA | Alta |
+| CU36 | Crear traspaso al flujo automatico | Ingeniero de QA | Alta |
 | CU37 | Registrar caso de prueba en Kiwi TCMS | Kiwi TCMS | Alta |
 | CU04 | Asociar documentacion a proyecto | Ingeniero de QA | Alta |
 | CU08 | Actualizar documentacion | Ingeniero de QA | Alta |
 | CU13 | Actualizar caso de uso | Ingeniero de QA | Alta |
 | CU18 | Actualizar requisito funcional | Ingeniero de QA | Alta |
 | CU28 | Anadir feedback a borrador | Ingeniero de QA | Alta |
-| CU38 | Registrar cuenta | Ingeniero de QA | Alta |
+| CU35 | Registrar cuenta | Ingeniero de QA | Alta |
 | CU01 | Iniciar sesion | Ingeniero de QA | Alta |
 | CU05 | Consultar referencias de documentacion de proyecto | Ingeniero de QA | Media |
 | CU06 | Listar documentacion | Ingeniero de QA | Media |
@@ -38,12 +38,10 @@
 | CU26 | Listar borradores | Ingeniero de QA | Media |
 | CU27 | Consultar borrador | Ingeniero de QA | Media |
 | CU29 | Rechazar borrador | Ingeniero de QA | Media |
-| CU31 | Buscar casos de prueba en Kiwi TCMS | Ingeniero de QA | Media |
-| CU32 | Ver caso de prueba en Kiwi TCMS | Ingeniero de QA | Media |
-| CU33 | Seleccionar sesiones | Ingeniero de QA | Media |
-| CU34 | Crear nueva sesion | Ingeniero de QA | Media |
-| CU35 | Eliminar sesion | Ingeniero de QA | Media |
-| CU36 | Guardar resultados | Ingeniero de QA | Media |
+| CU31 | Seleccionar sesiones | Ingeniero de QA | Media |
+| CU32 | Crear nueva sesion | Ingeniero de QA | Media |
+| CU33 | Eliminar sesion | Ingeniero de QA | Media |
+| CU34 | Guardar resultados | Ingeniero de QA | Media |
 | CU02 | Cerrar sesion | Ingeniero de QA | Media |
 
 ---
@@ -52,7 +50,7 @@
 
 ### Ingeniero de QA
 
-El actor `Ingeniero de QA` concentra el nucleo funcional del sistema. Se consideran especialmente representativos `CU03`, `CU39`, `CU12`, `CU17`, `CU21`, `CU25` y `CU30`, ya que reflejan el flujo principal real: introducir documentacion, decidir si continua en modo manual o automatico, mantener artefactos funcionales, construir escenarios verificables, elaborar borradores y aceptar la publicacion final en Kiwi TCMS.
+El actor `Ingeniero de QA` concentra el nucleo funcional del sistema. Se consideran especialmente representativos `CU03`, `CU36`, `CU12`, `CU17`, `CU21`, `CU25` y `CU30`, ya que reflejan el flujo principal real: introducir documentacion, decidir si continua en modo manual o automatico, mantener artefactos funcionales, construir escenarios verificables, elaborar borradores y publicar el resultado final en Kiwi TCMS.
 
 Se consideran de prioridad `Media` los casos de uso orientados a consulta, listado, rechazo o soporte operativo. Aportan continuidad al proceso, pero no desbloquean por si mismos la generacion principal de artefactos y resultados de prueba.
 

@@ -8,8 +8,8 @@ En el sistema se identifican dos actores principales:
 
 ![Actores](/Estudiantes/david-garcia-costa/Capitulo_2/CdU/ActoresIndividuales/Actores.svg)
 
-- **Ingeniero de QA (Quality Assurance)**: actor principal del sistema. Registra o inicia sesion, crea sesiones de trabajo, introduce documentacion funcional, mantiene artefactos funcionales, revisa borradores, publica resultados en Kiwi TCMS y consulta casos de prueba existentes.
-- **Kiwi TCMS**: sistema externo con el que se integra la solucion. Recibe casos de prueba publicados y permite consultar casos de prueba existentes dentro del alcance funcional definido.
+- **Ingeniero de QA (Quality Assurance)**: actor principal del sistema. Registra o inicia sesion, crea sesiones de trabajo, introduce documentacion funcional, mantiene artefactos funcionales, revisa borradores y publica resultados en Kiwi TCMS.
+- **Kiwi TCMS**: sistema externo con el que se integra la solucion. Recibe casos de prueba publicados dentro del alcance funcional definido.
 
 ---
 
@@ -40,12 +40,12 @@ El sistema contempla dos modos funcionales:
 - **Modo manual**: el Ingeniero de QA crea o mantiene documentacion, casos de uso, requisitos funcionales, escenarios Gherkin y borradores desde la interfaz.
 - **Modo automatico**: el Ingeniero de QA solicita un traspaso a partir de una sesion con documentacion, y el sistema prepara casos de uso, requisitos funcionales, escenarios Gherkin y borradores para su posterior revision.
 
-La integracion con **Kiwi TCMS** se utiliza para publicar casos de prueba y para las operaciones de consulta definidas en el alcance funcional.
+La integracion con **Kiwi TCMS** se utiliza para publicar casos de prueba.
 
 De esta forma:
 
 - **Ingeniero de QA** actua como actor primario e iniciador del flujo.
-- **Kiwi TCMS** actua como sistema externo de integracion, persistencia y consulta.
+- **Kiwi TCMS** actua como sistema externo de integracion y persistencia.
 
 ---
 

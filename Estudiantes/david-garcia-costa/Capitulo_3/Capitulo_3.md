@@ -153,9 +153,9 @@ Estas rutas muestran cómo la capa Controlador no se limita a exponer operacione
 
 Este caso de uso se satisface específicamente con la ruta `POST /api/documentation`. La vista envía la documentación funcional, y el controlador crea un documento en MongoDB asociado a una sesión de trabajo mediante `sessionId`.
 
-### CU-39 Crear traspaso al flujo automático
+### CU-36 Crear traspaso al flujo automático
 
-![CU-39](./CasosUso/CrearTraspasoFlujoAutomatico/CrearTraspasoFlujoAutomatico.svg)
+![CU-36](./CasosUso/CrearTraspasoFlujoAutomatico/CrearTraspasoFlujoAutomatico.svg)
 
 | Elemento | Valor |
 | --- | --- |
@@ -230,9 +230,9 @@ Este caso se satisface con `POST /api/scenarios`. El escenario queda almacenado 
 
 Este caso se satisface con `POST /api/drafts/assemble`. El controlador ensambla un borrador a partir de los casos de uso, requisitos funcionales y escenarios Gherkin existentes en la sesión.
 
-### CU-30 Aceptar y publicar caso de prueba a partir de borrador
+### CU-30 Publicar caso de prueba a partir de borrador
 
-![CU-30](./CasosUso/AceptarYPublicarCasoPruebaBorrador/AceptarYPublicarCasoPruebaBorrador.svg)
+![CU-30](./CasosUso/PublicarCasoPruebaBorrador/PublicarCasoPruebaBorrador.svg)
 
 | Elemento | Valor |
 | --- | --- |
@@ -784,4 +784,18 @@ La estructura de paquetes de `app` sigue el patrón MVC:
 
 [← Volver al Índice](../README.md)
 
-
+## 14. Diagramas Secuencia: Casos de Uso + Relevantes
+### Introducir Documentación Funcional
+![Diagramas Secuencia1](./DiagramaSecuencia/IntroducirDocFuncional/IntroducirDocFuncional.svg)
+### Crear Traspaso Al Flujo Automático
+![Diagramas Secuencia5](./DiagramaSecuencia/CrearTraspasoFlujoAut/CrearTraspasoFlujoAut.svg)
+### Crear Caso de Uso
+![Diagramas Secuencia2](./DiagramaSecuencia/CrearCU/CrearCU.svg)
+### Crear Requisito Funcional
+![Diagramas Secuencia3](./DiagramaSecuencia/CrearRF/CrearRF.svg)
+### Crear Escenario Gherkin
+![Diagramas Secuencia4](./DiagramaSecuencia/CrearEscenarioGherkin/CrearEscenarioGherkin.svg)
+### Crear Borrador de Caso de Prueba
+![Diagramas Secuencia6](./DiagramaSecuencia/CrearBorrador/CrearBorrador.svg)
+### Publicar Caso de Prueba A Partir de Borrador
+![Diagramas Secuencia7](./DiagramaSecuencia/PublicarCasoPrueba/PublicarCasoPrueba.svg)

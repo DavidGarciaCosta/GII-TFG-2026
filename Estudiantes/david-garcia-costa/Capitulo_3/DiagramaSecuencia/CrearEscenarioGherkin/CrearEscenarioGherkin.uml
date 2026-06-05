@@ -1,0 +1,27 @@
+@startuml
+actor "Ingeniero QA" as QA
+boundary "GherkinScenariosView" as Vista
+control "GherkinController.create" as Controller
+control "GherkinService" as Service
+entity "GherkinScenario" as Scenario
+entity "UseCase" as UseCase
+entity "FunctionalRequirement" as RF
+entity "Session" as Session
+database "MongoDB\n(gherkinscenarios)" as BD
+
+QA -> Vista : Introducir título, feature,\nucId, rfIds y pasos Given/When/Then
+Vista -> Controller : POST /api/scenarios
+Controller -> Service : createScenario(body, userId)
+Service -> Session : assertManualSession(sessionId)
+Session --> Service : sesión válida
+Service -> UseCase : validar ucId
+UseCase --> Service : ucId existente
+Service -> RF : validar rfIds
+RF --> Service : requisitos existentes
+Service -> Scenario : crear escenario Gherkin
+Scenario -> BD : GherkinScenario.create()
+BD --> Service : escenario creado
+Service --> Controller : resultado OK
+Controller --> Vista : respuesta OK
+Vista --> QA : Escenario Gherkin registrado
+@enduml

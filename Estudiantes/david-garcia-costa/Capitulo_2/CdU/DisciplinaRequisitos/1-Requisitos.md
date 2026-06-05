@@ -38,23 +38,19 @@ El sistema debe permitir crear, listar, consultar, actualizar, enriquecer con fe
 
 El sistema debe permitir aceptar un borrador valido y publicarlo en Kiwi TCMS como caso de prueba.
 
-## RF10. Consulta en Kiwi TCMS
-
-El sistema debe permitir buscar y ver casos de prueba en Kiwi TCMS.
-
-## RF11. Gestion de sesiones de trabajo
+## RF10. Gestion de sesiones de trabajo
 
 El sistema debe permitir seleccionar sesiones existentes, crear nuevas sesiones, actualizar sus datos, eliminar sesiones y guardar resultados para continuar, iniciar o depurar el trabajo en un contexto diferenciado.
 
-## RF12. Almacenamiento de resultados
+## RF11. Almacenamiento de resultados
 
 El sistema debe permitir guardar una instantanea de los resultados generados o editados durante una sesion, incluyendo documentacion, casos de uso, requisitos funcionales, escenarios Gherkin y borradores.
 
-## RF13. Trazabilidad funcional
+## RF12. Trazabilidad funcional
 
 El sistema debe mantener trazabilidad entre proyecto, sesion, documentacion, casos de uso, requisitos funcionales, escenarios Gherkin, borradores y casos de prueba publicados.
 
-## RF14. Traspaso hacia los agentes
+## RF13. Traspaso hacia los agentes
 
 El sistema debe permitir transferir una sesion con proyecto y documentacion al flujo automatico para que se preparen artefactos de prueba (CU,RF,Escenarios) y borradores sin continuar el flujo manual.
 

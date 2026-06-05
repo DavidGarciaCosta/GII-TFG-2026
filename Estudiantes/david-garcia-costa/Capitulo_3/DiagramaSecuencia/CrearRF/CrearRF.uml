@@ -1,0 +1,24 @@
+@startuml
+actor "Ingeniero QA" as QA
+boundary "FunctionalRequirementView" as Vista
+control "RequirementController.create" as Controller
+entity "FunctionalRequirement" as RF
+entity "Session" as Session
+database "MongoDB\n(functionalrequirements)" as BD
+
+QA -> Vista : Introducir requisito funcional
+Vista -> Controller : POST /api/requirements
+
+Controller -> Session : validar sesión
+Session --> Controller : sesión válida
+
+Controller -> RF : validar datos
+RF --> Controller : OK
+
+Controller -> BD : FunctionalRequirement.create()
+BD --> Controller : requisito creado
+
+Controller --> Vista : respuesta OK
+Vista --> QA : Requisito funcional registrado
+
+@enduml

@@ -1,0 +1,19 @@
+@startuml
+actor "Ingeniero QA" as QA
+boundary "DocumentationView" as Vista
+control "DocumentationController.create" as Controller
+entity "Documentation" as Documentation
+entity "Session" as Session
+database "MongoDB\n(documentations)" as BD
+
+QA -> Vista : Introducir proyecto, tipo, etiqueta,\ntítulo y contenido
+Vista -> Controller : POST /api/documentation
+Controller -> Documentation : validar datos obligatorios
+Documentation --> Controller : OK
+Controller -> Session : asociar mediante sessionId
+Session --> Controller : sesión válida
+Controller -> BD : Documentation.create()
+BD --> Controller : documentación registrada
+Controller --> Vista : respuesta OK
+Vista --> QA : Documentación funcional registrada
+@enduml

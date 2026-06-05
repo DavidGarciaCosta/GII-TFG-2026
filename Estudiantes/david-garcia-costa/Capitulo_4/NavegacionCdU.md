@@ -13,12 +13,12 @@ El siguiente diagrama resume las acciones principales que puede realizar el sist
 | Caso de uso | Pantalla principal | MVC | Flujo manual | Flujo automatico |
 |---|---|---|---|---|
 | [UC-03 Introducir documentacion funcional](#uc-03-introducir-documentacion-funcional) | [Ver pantalla](#pantalla-uc-03) | [Ver MVC](#mvc-uc-03) | [Manual](#manual-uc-03) | [Automatico](#automatico-uc-03) |
-| [UC-39 Crear traspaso al flujo automatico](#uc-39-crear-traspaso-al-flujo-automatico) | [Ver pantalla](#pantalla-uc-39) | [Ver MVC](#mvc-uc-39) | [Manual](#manual-uc-39) | [Automatico](#automatico-uc-39) |
+| [UC-36 Crear traspaso al flujo automatico](#uc-36-crear-traspaso-al-flujo-automatico) | [Ver pantalla](#pantalla-uc-36) | [Ver MVC](#mvc-uc-36) | [Manual](#manual-uc-36) | [Automatico](#automatico-uc-36) |
 | [UC-12 Crear caso de uso](#uc-12-crear-caso-de-uso) | [Ver pantalla](#pantalla-uc-12) | [Ver MVC](#mvc-uc-12) | [Manual](#manual-uc-12) | [Automatico](#automatico-uc-12) |
 | [UC-17 Crear requisito funcional](#uc-17-crear-requisito-funcional) | [Ver pantalla](#pantalla-uc-17) | [Ver MVC](#mvc-uc-17) | [Manual](#manual-uc-17) | [Automatico](#automatico-uc-17) |
 | [UC-21 Crear escenario Gherkin](#uc-21-crear-escenario-gherkin) | [Ver pantalla](#pantalla-uc-21) | [Ver MVC](#mvc-uc-21) | [Manual](#manual-uc-21) | [Automatico](#automatico-uc-21) |
 | [UC-25 Crear borrador de caso de prueba](#uc-25-crear-borrador-de-caso-de-prueba) | [Ver pantalla](#pantalla-uc-25) | [Ver MVC](#mvc-uc-25) | [Manual](#manual-uc-25) | [Automatico](#automatico-uc-25) |
-| [UC-30 Aceptar y publicar caso de prueba](#uc-30-aceptar-y-publicar-caso-de-prueba) | [Ver pantalla](#pantalla-uc-30) | [Ver MVC](#mvc-uc-30) | [Manual](#manual-uc-30) | [Automatico](#automatico-uc-30) |
+| [UC-30 Publicar caso de prueba a partir de borrador](#uc-30-publicar-caso-de-prueba-a-partir-de-borrador) | [Ver pantalla](#pantalla-uc-30) | [Ver MVC](#mvc-uc-30) | [Manual](#manual-uc-30) | [Automatico](#automatico-uc-30) |
 
 ---
 
@@ -49,7 +49,7 @@ El siguiente diagrama resume las acciones principales que puede realizar el sist
 
 
 
-## UC-39 Crear traspaso al flujo automatico
+## UC-36 Crear traspaso al flujo automatico
 
 ### Detalle funcional
 
@@ -62,22 +62,22 @@ El siguiente diagrama resume las acciones principales que puede realizar el sist
 - **Diagrama de detalle:** ![Crear traspaso al flujo automatico](../Capitulo_2/CdU/DetallarCdU/QA/CrearTraspasoFlujoAutomatico/CrearTraspasoFlujoAutomatico.svg)
 
 
-### MVC UC-39
+### MVC UC-36
 
-<a id="mvc-uc-39"></a>
+<a id="mvc-uc-36"></a>
 
 ![MVC crear traspaso al flujo automatico](../Capitulo_3/CasosUso/CrearTraspasoFlujoAutomatico/CrearTraspasoFlujoAutomatico.svg)
 
-### Flujo UC-39
+### Flujo UC-36
 
-<a id="manual-uc-39"></a>
+<a id="manual-uc-36"></a>
 
 Su finalidad es cambiar la sesion desde la aplicacion manual hacia el entorno de agentes. La pantalla previa permite elegir entre continuar manualmente o iniciar el flujo automatico.
 
 ![Seleccion de flujo](Imagenes_MapaNavegacion/Flujos.png)
 
 
-<a id="automatico-uc-39"></a>
+<a id="automatico-uc-36"></a>
 
 ![Confirmacion del traspaso al flujo automatico](CasosUsoRelevantes/CrearTraspasoFlujoAuto/CrearTraspasoFlujoAuto2.png)
 
@@ -217,7 +217,7 @@ Su finalidad es cambiar la sesion desde la aplicacion manual hacia el entorno de
 
 ---
 
-## UC-30 Aceptar y publicar caso de prueba
+## UC-30 Publicar caso de prueba a partir de borrador
 
 ### Detalle funcional
 
@@ -227,27 +227,27 @@ Su finalidad es cambiar la sesion desde la aplicacion manual hacia el entorno de
 - **Flujo principal:** 1. El actor revisa el borrador. 2. El sistema confirma la publicacion. 3. El sistema envia el contenido del borrador a Kiwi TCMS. 4. Kiwi TCMS registra el caso. 5. El sistema guarda el identificador devuelto y marca el borrador como publicado.
 - **Casos de Error:** Borrador no encontrado, borrador sin contenido, fallo de integracion o error de publicacion.
 - **Postcondiciones:** El caso de prueba queda publicado y el borrador queda marcado como publicado.
-- **Diagrama de detalle:** ![Aceptar y publicar caso de prueba a partir de borrador](../Capitulo_2/CdU/DetallarCdU/QA/AceptarYPublicarCasoPruebaBorrador/AceptarYPublicarCasoPruebaBorrador.svg)
+- **Diagrama de detalle:** ![Publicar caso de prueba a partir de borrador](../Capitulo_2/CdU/DetallarCdU/QA/PublicarCasoPruebaBorrador/PublicarCasoPruebaBorrador.svg)
 
 
 ### MVC UC-30
 
 <a id="mvc-uc-30"></a>
 
-![MVC aceptar y publicar caso de prueba](../Capitulo_3/CasosUso/AceptarYPublicarCasoPruebaBorrador/AceptarYPublicarCasoPruebaBorrador.svg)
+![MVC publicar caso de prueba a partir de borrador](../Capitulo_3/CasosUso/PublicarCasoPruebaBorrador/PublicarCasoPruebaBorrador.svg)
 
 ### Flujo manual UC-30
 
 <a id="manual-uc-30"></a>
 
-![Aceptar y publicar caso de prueba manualmente](CasosUsoRelevantes/AceptaryPublicarCasoPrueba/Manual/AceptaryPublicarCasoPrueba.png)
+![Publicar caso de prueba manualmente](CasosUsoRelevantes/AceptaryPublicarCasoPrueba/Manual/AceptaryPublicarCasoPrueba.png)
 
 
 ### Flujo automatico UC-30
 
 <a id="automatico-uc-30"></a>
 
-![Aceptar y publicar caso de prueba con agentes](CasosUsoRelevantes/AceptaryPublicarCasoPrueba/Auto/AceptaryPublicarCasoPrueba.png)
+![Publicar caso de prueba con agentes](CasosUsoRelevantes/AceptaryPublicarCasoPrueba/Auto/AceptaryPublicarCasoPrueba.png)
 
 
 
