@@ -22,7 +22,7 @@ Este proyecto desarrolla un prototipo de apoyo al proceso de QA que permite gene
 - [Actores y casos de uso](Capitulo_2/CdU/DisciplinaRequisitos/3-ActoresCdU.md)
 - [Priorización de casos de uso](Capitulo_2/CdU/DisciplinaRequisitos/4-PriorizarCdU.md)
 - [Detalle de casos de uso](Capitulo_2/CdU/DisciplinaRequisitos/5-DetallarCdU.md)
-- [Prototipo de agentes](Capitulo_2/PrototipoAgentes/Input_Output.svg)
+
 
 ### Capítulo 3 - Diseño del sistema
 
