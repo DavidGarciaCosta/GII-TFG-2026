@@ -17,7 +17,7 @@ La **Documentación** constituye el punto de entrada del sistema y puede present
 
 A partir de la documentación se obtienen **Casos de Uso** y **Requisitos Funcionales**, que representan la base funcional del conocimiento extraído. Entre ambos se mantiene una relación de trazabilidad, ya que describen de forma complementaria el comportamiento esperado del sistema.
 
-Sobre esta base se generan **Escenarios Gherkin**, que formalizan el comportamiento en un formato estructurado y verificable. Dichos escenarios se integran en un **Borrador**, que constituye el artefacto interno de revisión. El borrador permite ser consultado, revisado, versionado, aceptado o rechazado, pero no se registra directamente en Kiwi TCMS.
+Sobre esta base se generan **Escenarios Gherkin**, que formalizan el comportamiento en un formato estructurado y verificable. Dichos escenarios se integran en un **Borrador**, que constituye el artefacto interno de revisión. El borrador permite ser consultado, recibir feedback, ser rechazado o publicarse como caso de prueba en Kiwi TCMS.
 
 Cuando un borrador es aceptado, el sistema deriva de él un **Caso de Prueba**, que representa el artefacto final del dominio. Este caso de prueba puede registrarse en **Kiwi TCMS**, que se modela como sistema externo participante. Kiwi TCMS no forma parte del núcleo del dominio, pero interviene en el flujo funcional global como repositorio externo de registro de casos de prueba.
 
@@ -45,7 +45,9 @@ De este modo, el modelo mantiene la trazabilidad completa desde el usuario y su 
 
 #### Explicacion
 
-El `CasoDeUso` nace en `Identificado` cuando se extrae o crea dentro del sistema. Pasa a `Revisado` cuando su contenido ha sido comprobado y puede entrar en `Modificado` si se actualiza posteriormente. Cuando queda validado para ser utilizado como base funcional alcanza el estado `Aprobado`. Desde los estados no finales tambien puede pasar a `Eliminado` si deja de ser necesario o deja de ser valido dentro del proyecto.
+El `CasoDeUso` nace en `Registrado` cuando se crea dentro del sistema a partir de la documentacion funcional. Mientras permanece registrado puede consultarse, listarse y utilizarse como base para la trazabilidad con requisitos funcionales y escenarios Gherkin.
+
+Si el usuario modifica su contenido, el caso de uso pasa temporalmente por `Actualizado` y vuelve a `Registrado` cuando los cambios quedan guardados. El otro posible final del ciclo es `Eliminado`, que representa la ejecucion del caso de uso de eliminacion cuando el caso de uso deja de ser necesario dentro de la sesion.
 
 ### Estados de `RequisitoFuncional`
 
@@ -55,9 +57,11 @@ El `CasoDeUso` nace en `Identificado` cuando se extrae o crea dentro del sistema
 
 #### Explicacion
 
-El `RequisitoFuncional` sigue una evolucion paralela a la del caso de uso. Parte de `Identificado`, avanza a `Revisado`, puede pasar por `Modificado` cuando se ajusta su contenido y termina en `Aprobado` cuando queda validado para la generacion de escenarios y la trazabilidad posterior. Igual que en el caso anterior, puede acabar en `Eliminado` desde los estados no finales.
+El `RequisitoFuncional` sigue una evolucion equivalente a la del caso de uso. Nace en `Registrado` cuando se crea dentro de una sesion, normalmente asociado a la documentacion funcional y, si procede, a un caso de uso mediante su identificador.
 
-Este diagrama refuerza la idea de control y trazabilidad sobre los requisitos funcionales, asegurando que antes de usarlos como base para pruebas o implementacion hayan pasado por una fase de revision y aprobacion.
+Cuando se actualiza su descripcion, prioridad, trazabilidad o asociacion con un caso de uso, pasa por `Actualizado` y vuelve a `Registrado` una vez guardados los cambios. Tambien puede terminar en `Eliminado` si se ejecuta el caso de uso de eliminacion y el requisito deja de formar parte de la sesion.
+
+Este diagrama refuerza la idea de trazabilidad sobre los requisitos funcionales sin introducir estados de revision que no forman parte del flujo implementado.
 
 ### Estados de `Borrador`
 
@@ -67,7 +71,11 @@ Este diagrama refuerza la idea de control y trazabilidad sobre los requisitos fu
 
 #### Explicacion
 
-El `Borrador` comienza en `Generado` cuando el sistema produce una primera propuesta a partir de los escenarios Gherkin. Pasa a `PendienteRevision` cuando queda disponible para el Ingeniero de QA y puede entrar en `Modificado` si se incorpora feedback o se regenera su contenido. Cuando el borrador queda conforme, alcanza el estado `Aprobado`, que habilita la generacion del caso de prueba derivado. Si finalmente se descarta o deja de ser util, tambien puede terminar en `Eliminado`.
+El `Borrador` comienza en `Pendiente` cuando se crea el borrador de caso de prueba a partir de la informacion de la sesion: casos de uso, requisitos funcionales y escenarios Gherkin. Mientras se encuentra en este estado puede recibir feedback, que queda asociado al propio borrador sin cambiar su estado principal.
+
+Desde `Pendiente`, el borrador puede pasar a `Rechazado` si el Ingeniero de QA considera que no es valido. Este estado puede ser final si el borrador se descarta, o puede volver a `Pendiente` cuando se crea de nuevo el borrador incorporando las correcciones necesarias.
+
+El otro final posible es `Publicado`, que se alcanza cuando se publica el caso de prueba a partir del borrador en Kiwi TCMS. En ese momento el borrador queda asociado al identificador del caso de prueba creado en el sistema externo.
 
 ---
 
