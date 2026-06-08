@@ -12,7 +12,7 @@ El siguiente diagrama resume las acciones principales que puede realizar el sist
 
 | Caso de uso | Pantalla principal | MVC | Flujo manual | Flujo automatico |
 |---|---|---|---|---|
-| [UC-03 Introducir documentacion funcional](#uc-03-introducir-documentacion-funcional) | [Ver pantalla](#pantalla-uc-03) | [Ver MVC](#mvc-uc-03) | [Manual](#manual-uc-03) | [Automatico](#automatico-uc-03) |
+| [UC-03 Introducir documentacion funcional](#uc-03-introducir-documentacion-funcional) | [Ver pantalla](#pantalla-uc-03) | [Ver MVC](#mvc-uc-03) | - | - |
 | [UC-36 Crear traspaso al flujo automatico](#uc-36-crear-traspaso-al-flujo-automatico) | [Ver pantalla](#pantalla-uc-36) | [Ver MVC](#mvc-uc-36) | [Manual](#manual-uc-36) | [Automatico](#automatico-uc-36) |
 | [UC-12 Crear caso de uso](#uc-12-crear-caso-de-uso) | [Ver pantalla](#pantalla-uc-12) | [Ver MVC](#mvc-uc-12) | [Manual](#manual-uc-12) | [Automatico](#automatico-uc-12) |
 | [UC-17 Crear requisito funcional](#uc-17-crear-requisito-funcional) | [Ver pantalla](#pantalla-uc-17) | [Ver MVC](#mvc-uc-17) | [Manual](#manual-uc-17) | [Automatico](#automatico-uc-17) |
@@ -41,6 +41,10 @@ El siguiente diagrama resume las acciones principales que puede realizar el sist
 
 ![MVC introducir documentacion](../Capitulo_3/CasosUso/IntroducirDocumentacion/IntroducirDocumentacion.svg)
 
+### Diagrama de secuencia UC-03
+
+![Secuencia introducir documentacion funcional](../Capitulo_3/DiagramaSecuencia/IntroducirDocFuncional/IntroducirDocFuncional.svg)
+
 ### Pantalla UC-03
 
 <a id="pantalla-uc-03"></a>
@@ -67,6 +71,10 @@ El siguiente diagrama resume las acciones principales que puede realizar el sist
 <a id="mvc-uc-36"></a>
 
 ![MVC crear traspaso al flujo automatico](../Capitulo_3/CasosUso/CrearTraspasoFlujoAutomatico/CrearTraspasoFlujoAutomatico.svg)
+
+### Diagrama de secuencia UC-36
+
+![Secuencia crear traspaso al flujo automatico](../Capitulo_3/DiagramaSecuencia/CrearTraspasoFlujoAut/CrearTraspasoFlujoAut.svg)
 
 ### Flujo UC-36
 
@@ -104,6 +112,10 @@ Su finalidad es cambiar la sesion desde la aplicacion manual hacia el entorno de
 
 ![MVC crear caso de uso](../Capitulo_3/CasosUso/CrearCasoUso/CrearCasoUso.svg)
 
+### Diagrama de secuencia UC-12
+
+![Secuencia crear caso de uso](../Capitulo_3/DiagramaSecuencia/CrearCU/CrearCU.svg)
+
 ### Flujo manual UC-12
 
 <a id="manual-uc-12"></a>
@@ -137,6 +149,10 @@ Su finalidad es cambiar la sesion desde la aplicacion manual hacia el entorno de
 
 ![MVC crear requisito funcional](../Capitulo_3/CasosUso/CrearRF/CrearRF.svg)
 
+### Diagrama de secuencia UC-17
+
+![Secuencia crear requisito funcional](../Capitulo_3/DiagramaSecuencia/CrearRF/CrearRF.svg)
+
 ### Flujo manual UC-17
 
 <a id="manual-uc-17"></a>
@@ -169,6 +185,10 @@ Su finalidad es cambiar la sesion desde la aplicacion manual hacia el entorno de
 
 ![MVC crear escenario Gherkin](../Capitulo_3/CasosUso/CrearEscenariosGherkin/CrearEscenariosGherkin.svg)
 
+### Diagrama de secuencia UC-21
+
+![Secuencia crear escenario Gherkin](../Capitulo_3/DiagramaSecuencia/CrearEscenarioGherkin/CrearEscenarioGherkin.svg)
+
 ### Flujo manual UC-21
 
 <a id="manual-uc-21"></a>
@@ -200,6 +220,10 @@ Su finalidad es cambiar la sesion desde la aplicacion manual hacia el entorno de
 <a id="mvc-uc-25"></a>
 
 ![MVC crear borrador](../Capitulo_3/CasosUso/CrearBorrador/CrearBorrador.svg)
+
+### Diagrama de secuencia UC-25
+
+![Secuencia crear borrador de caso de prueba](../Capitulo_3/DiagramaSecuencia/CrearBorrador/CrearBorrador.svg)
 
 ### Flujo manual UC-25
 
@@ -235,6 +259,10 @@ Su finalidad es cambiar la sesion desde la aplicacion manual hacia el entorno de
 <a id="mvc-uc-30"></a>
 
 ![MVC publicar caso de prueba a partir de borrador](../Capitulo_3/CasosUso/PublicarCasoPruebaBorrador/PublicarCasoPruebaBorrador.svg)
+
+### Diagrama de secuencia UC-30
+
+![Secuencia publicar caso de prueba a partir de borrador](../Capitulo_3/DiagramaSecuencia/PublicarCasoPrueba/PublicarCasoPrueba.svg)
 
 ### Flujo manual UC-30
 
